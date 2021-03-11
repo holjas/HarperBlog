@@ -1,5 +1,31 @@
-// important. do not move
 @import "./variables";
-//
-@import "./header";
 @import "./setup";
+//
+
+// General styling
+.wrapper {
+  max-width: 1220px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+// Top Navigation Start
+.navBar {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: red;
+  ul {
+    text-decoration: none;
+    text-align: center;
+    li {
+      display: inline-block;
+    }
+  }
+}
+
+// Home Section
+.home {
+  display: flex;
+  flex-direction: column;
+  background-color: $primary2;
+}

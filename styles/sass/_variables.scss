@@ -1,15 +1,19 @@
-// HARPER PROJECT VARIABLES
+// harper blog
 // colours
-$black: rgb(23, 23, 23);
-$white: rgb(255, 255, 255);
-$accent: rgb(243, 141, 141);
-$primary1: rgb(34, 144, 132);
-$primary2: rgb(104, 176, 193);
-$primary3: rgb(185, 221, 231);
-$primary4: rgb(246, 246, 246);
+$accent: #f38d8d;
+$primary1: #227284;
+$primary2: #68b0c1;
+$primary3: #b9dde7;
+$primary4: #f6f6f6;
+$black: #171717;
+$white: #ffffff;
 
-// Font Styles
-$headingText: "Oswald", sans-serif;
-$bodyText: "Cabin", sans-serif;
-// <link rel="preconnect" href="https://fonts.gstatic.com">
-// <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Oswald:wght@700&display=swap" rel="stylesheet">
+// font styles and sizes
+$headerFont: "Oswald", sans-serif;
+$bodyFont: "Cabin", sans-serif;
+$headingFontSize2: 42px;
+$headingFontSize1: 80px;
+$headingFontSize3: 32px;
+$headingFontSize4: 24px;
+$mainFontSize: 20px;
+$letterSpacing: 1px;
