@@ -33,19 +33,20 @@
   >   Nav Menu & Button : hover/focus should transition text to $white
 
 **Variable Names**
-$accent - #f38d8d - pink
-$primary1 -#227284 - dusk blue
-$primary2 - #68B0C1	- grey blue
-$primary3 - #B9DDE7 - light blue grey
-$primary4 - #F6F6F6 - white shade
-$black - #171717 - black
-$white - #FFFFFF - white  
-$headerFont - "Oswald", sans-serif
-$bodyFont - "Cabin", sans-serif
 
-> $headingFontSize1 - 80px
-> $headingFontSize2 - 42px
-> $headingFontSize3 - 32px
-> $headingFontSize4 - 24px
-> $mainFontSize - 20px
-> $letterSpacing - 1px
+- $accent - #f38d8d - pink
+- $primary1 -#227284 - dusk blue
+- $primary2 - #68B0C1 - grey blue
+- $primary3 - #B9DDE7 - light blue grey
+- $primary4 - #F6F6F6 - white shade
+- $black - #171717 - black
+- $white - #FFFFFF - white
+- $headerFont - "Oswald", sans-serif
+- $bodyFont - "Cabin", sans-serif
+
+> - $headingFontSize1 - 80px
+> - $headingFontSize2 - 42px
+> - $headingFontSize3 - 32px
+> - $headingFontSize4 - 24px
+> - $mainFontSize - 20px
+> - $letterSpacing - 1px
