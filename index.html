@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HollyJasiuraProjectOne</title>
     <link rel="stylesheet" href="./styles/style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin&family=Oswald:wght@700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -14,7 +20,7 @@
         <!-- Top Navigation Start -->
         <nav class="navBar">
           <ul class="navSelection">
-            <li><a href="#home">home</a></li>
+            <li><a href="#home" class="active">home</a></li>
             <li><a href="#about">about</a></li>
             <li><span class="navLogo">harper</span></li>
             <li><a href="blog">blog</a></li>
@@ -22,8 +28,9 @@
           </ul>
         </nav>
         <!-- Top Navigation End -->
-        <!-- Header Start -->
-        <div class="header">
+
+        <!-- homeSection Start -->
+        <div class="homeSection">
           <div class="imageContainer">
             <img
               src="./assets/home-image-1.jpg"
@@ -38,8 +45,36 @@
             />
           </div>
         </div>
-        <!-- Header End -->
       </div>
+      <!-- homeSection End -->
     </header>
+
+    <main>
+      <!-- aboutSection  start -->
+      <div class="about" id="about">
+        <section class="wrapper aboutSection">
+          <h2>who is harper?</h2>
+          <p>
+            Pinterest copper mug PBR&B enamel pin mustache blog. Ennui normcore
+            photo booth, hammock godard microdosing schlitz vaporware. Vegan
+            skateboard schlitz chambray.
+          </p>
+          <button class="btn">
+            <a href="">find out more</a>
+          </button>
+        </section>
+      </div>
+      <!-- aboutSection  end -->
+      <!-- fancyImageDivider  start -->
+      <div class="fancyImage">
+        <div class="fancyImageContainer">
+          <img
+            src="./assets/home-image-2.jpg"
+            alt="photo of side of building in colors aesthetic that matches the web site"
+          />
+        </div>
+      </div>
+      <!-- fancyImageDivider  end -->
+    </main>
   </body>
 </html>

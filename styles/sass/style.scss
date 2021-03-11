@@ -1,31 +1,110 @@
 @import "./variables";
 @import "./setup";
+@import "./mixins";
 //
 
-// General styling
+// General & Shared Stylings
 .wrapper {
   max-width: 1220px;
   padding: 20px;
   margin: 0 auto;
 }
+.imageContainer {
+  width: 100px;
+  height: 100px;
+}
+img {
+  width: 100%;
+}
+.btn {
+  font-family: $headerFont;
+  font-size: $mainFontSize;
+  letter-spacing: $letterSpacing;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 30px;
+  background-color: $accent;
+  border: transparent;
+}
+.btn a {
+  color: $black;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.btn a:hover,
+.btn a:focus {
+  color: $white;
+}
+// SECTION SPECIFIC STYLING
 
 // Top Navigation Start
 .navBar {
   display: flex;
-  justify-content: space-evenly;
-  background-color: red;
-  ul {
-    text-decoration: none;
-    text-align: center;
-    li {
-      display: inline-block;
-    }
-  }
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
-
+.navBar ul {
+  background-color: red;
+  margin-left: 230px;
+  margin-right: 230px;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  text-align: center;
+}
+.navBar ul li {
+  display: inline-block;
+  flex-grow: 2;
+  flex-shrink: 0;
+  flex-basis: 20%;
+}
+.navBar a {
+  text-decoration: none;
+  @include fontStyleHeader($mainFontSize);
+}
+.navLogo {
+  @include fontStyleHeader($headingFontSize3);
+}
 // Home Section
+header {
+  background-color: $primary2;
+}
 .home {
   display: flex;
   flex-direction: column;
-  background-color: $primary2;
+}
+
+// About Section
+.about {
+  background-color: $primary4;
+}
+.aboutSection {
+  margin-left: 45%;
+  text-align: left;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.aboutSection h2 {
+  font-family: $headerFont;
+  font-size: $headingFontSize2;
+  letter-spacing: $letterSpacing;
+  text-transform: uppercase;
+  background-color: $primary4;
+  padding-bottom: 20px;
+}
+.aboutSection p {
+  font-family: $bodyFont;
+  font-size: $mainFontSize;
+  letter-spacing: $letterSpacing;
+  padding-bottom: 20px;
+}
+
+// fancyImageDivider Section
+.fancyImageContainer {
+  width: 100%;
 }
