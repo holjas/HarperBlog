@@ -6,15 +6,19 @@
 // General & Shared Stylings
 .wrapper {
   max-width: 1220px;
-  padding: 20px;
   margin: 0 auto;
+  padding: 100px 40px;
 }
-.imageContainer {
-  width: 100px;
-  height: 100px;
+.wrapperSectionPrimary {
+  background-color: $primary4;
 }
-img {
-  width: 100%;
+.wrapperSectionWhite {
+  background-color: $white;
+}
+
+section {
+  margin: 0;
+  padding: 0;
 }
 .btn {
   font-family: $headerFont;
@@ -29,7 +33,7 @@ img {
 .btn a {
   color: $black;
   text-decoration: none;
-  transition: 0.5s;
+  transition: 0.7s;
 }
 .btn a:hover,
 .btn a:focus {
@@ -65,7 +69,11 @@ img {
 }
 .navBar a {
   text-decoration: none;
+  transition: 0.7s;
   @include fontStyleHeader($mainFontSize);
+}
+.navBar a:hover {
+  color: $white;
 }
 .navLogo {
   @include fontStyleHeader($headingFontSize3);
@@ -78,16 +86,29 @@ header {
   display: flex;
   flex-direction: column;
 }
-
-// About Section
-.about {
-  background-color: $primary4;
+.headerHeadline {
+  font-size: 112px;
+  font-family: $headerFont;
+  text-transform: uppercase;
 }
+.imageContainer {
+  width: 100px;
+  height: 100px;
+}
+// About Section
 .aboutSection {
-  margin-left: 45%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.about {
+  width: 60%;
   text-align: left;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  // padding-top: 60px;
+  // padding-bottom: 60px;
+  // padding: 100px 40px;
 }
 .aboutSection h2 {
   font-family: $headerFont;
@@ -105,6 +126,58 @@ header {
 }
 
 // fancyImageDivider Section
-.fancyImageContainer {
+.fancyImage {
   width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: red;
+}
+// .fancyImageContainer {
+//   background-color: $primary4;
+//   object-fit: contain;
+// }
+.fancyImage img {
+  object-fit: contain;
+}
+//
+// smallContact Section
+.smallContactSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.smallContact {
+  width: 50%;
+}
+.smallContactSection i {
+  font-size: $headingFontSize4;
+}
+.smallCircle {
+  display: inline-block;
+  background-color: $primary3;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 70px;
+  height: 60px;
+  width: 60px;
+  margin: 10px;
+}
+
+.smallContactSection h3 {
+  display: inline-block;
+  font-family: $headerFont;
+  font-size: $headingFontSize3;
+  letter-spacing: $letterSpacing;
+  text-transform: uppercase;
+  padding-left: 20px;
+}
+
+.smallContactSection p {
+  font-family: $bodyFont;
+  font-size: $mainFontSize;
+  letter-spacing: $letterSpacing;
+  padding-left: 80px;
+  padding-bottom: 20px;
 }
