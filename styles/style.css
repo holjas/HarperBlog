@@ -428,14 +428,14 @@ header {
 }
 
 .headerHeadline {
-  font-size: 112px;
+  font-size: 7rem;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }
 
 .imageContainer {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
 }
 
 .aboutSection {
@@ -477,12 +477,12 @@ header {
 
 .fancyImage {
   width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: red;
+  background-color: #f6f6f6;
 }
 
-.fancyImage img {
+.imageCover {
+  width: 100%;
+  height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -537,6 +537,59 @@ header {
   font-family: "Cabin", sans-serif;
   font-size: 1.25rem;
   letter-spacing: 0.063rem;
-  padding-left: 80px;
+  padding-left: 100px;
   padding-bottom: 20px;
+}
+
+.photoBlogSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: chocolate;
+}
+
+.photoBlogSection h3 {
+  display: inline-block;
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.063rem;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+.photoBlogSection p {
+  font-family: "Cabin", sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.063rem;
+  padding-bottom: 20px;
+}
+
+.photoBlogflexItem {
+  width: 50%;
+  position: relative;
+}
+
+.photoBlogimageContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: flex-end;
+          flex-direction: flex-end;
+  width: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
