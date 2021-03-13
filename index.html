@@ -21,7 +21,7 @@
 
   <body>
     <header>
-      <div class="wrapper home">
+      <div class="wrapperSides">
         <!-- Top Navigation Start -->
         <nav class="navBar">
           <ul class="navSelection">
@@ -35,8 +35,8 @@
         <!-- Top Navigation End -->
 
         <!-- homeSection Start -->
-        <div class="homeSection">
-          <div class="imageContainer">
+        <div class="homeSection home">
+          <div class="homeImageContainer">
             <img
               src="./assets/home-image-1.jpg"
               alt="photo of harper's face surrounded by balloons"
@@ -139,18 +139,42 @@
 
       <!-- photoBlogSection start -->
       <section class="wrapperSectionWhite">
-        <div class="wrapper photoBlogSection">
+        <div class="wrapperSides photoBlogSection">
           <div class="photoBlogflexItem">
             <div class="photoBlogimageContainer">
               <img
                 src="./assets/home-image-3.jpg"
                 alt="sunset on the ocean with surfers"
+                class="photoBlogImage"
               />
             </div>
           </div>
 
           <div class="photoBlogflexItem">
-            <h3>harper's travels</h3>
+            <h3 class="photoBlogPdLeft">harper's travels</h3>
+            <p class="photoBlogPdLeft">
+              Pinterest copper mug PBR&B enamel pin mustache blog. Ennui
+              normcore photo booth, hammock godard microdosing schlitz
+              vaporware. Vegan skateboard schlitz chambray.
+            </p>
+            <button class="btn photoBlogPdLeft">
+              <a href="">read more</a>
+            </button>
+          </div>
+        </div>
+        <!-- new item -->
+        <div class="wrapperSides photoBlogSectionRowRev photoBlogSection">
+          <div class="photoBlogflexItem">
+            <div class="photoBlogimageContainer">
+              <img
+                src="./assets/home-image-4.jpg"
+                alt="exterior of industrial building with smoke stacks"
+              />
+            </div>
+          </div>
+
+          <div class="photoBlogflexItem2 photoBlogPdRigt">
+            <h3>favourite things</h3>
             <p>
               Pinterest copper mug PBR&B enamel pin mustache blog. Ennui
               normcore photo booth, hammock godard microdosing schlitz
@@ -163,6 +187,52 @@
         </div>
       </section>
       <!-- photoBlogSection end -->
+
+      <!-- harperJourney  start -->
+      <section class="wrapperSectionPrimary">
+        <div class="wrapper harperJourneySection">
+          <div class="smallJourneyImage">
+            <div class="imageContainer">
+              <img src="./assets/home-image-5.jpg" alt="" />
+            </div>
+          </div>
+          <div class="smallJourneyText">
+            <h3>harper's journey</h3>
+            <p>
+              Flannel banh mi live-edge edison bulb neutra green juice shabby
+              selfies. Pickled paleo literally hot chicken, taxidermy chillwave
+              copper mug coloring book quinoa gluten-free sartorial.Flannel banh
+              mi live-edge edison bulb neutra green juice shabby selfies.
+              Pickled paleo literally hot chicken, taxidermy chillwave copper
+              mug coloring book quinoa gluten-free sartorial.
+            </p>
+            <button class="btn">
+              <a href="">find out more</a>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- harperJourney  end -->
+
+      <!-- imageGallery start  -->
+      <section class="wrapperSectionWhite">
+        <div class="wrapper imageGallery">
+          <div class="imageGalleryItem">
+            <img src="./assets/home-image-6.jpg" alt="" />
+          </div>
+          <div class="imageGalleryItem">
+            <img src="./assets/home-image-7.jpg" alt="" />
+          </div>
+          <div class="imageGalleryItem">
+            <img src="./assets/home-image-8.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+      <!-- imageGallery end  -->
     </main>
+    <footer>
+      <p>Copyright 2018 HackerYou</p>
+    </footer>
   </body>
 </html>
