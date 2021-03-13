@@ -430,10 +430,10 @@ section {
 }
 
 header {
-  background-color: #68b0c1;
+  background-color: #b9dde7;
 }
 
-.home {
+.homeSection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -441,9 +441,21 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  height: 34rem;
 }
 
-.headerHeadline {
+.homeImageContainer {
+  margin-left: 50px;
+  margin-top: 20px;
+  width: calc(35%-50px);
+}
+
+.homeImageContainer img {
+  -webkit-box-shadow: 15px 15px #ffffff;
+          box-shadow: 15px 15px #ffffff;
+}
+
+.headerHeadline h1 {
   font-family: "Oswald", sans-serif;
   font-size: 7rem;
   color: #171717;
@@ -452,11 +464,23 @@ header {
   letter-spacing: 0.063rem;
 }
 
-.homeImageContainer {
-  width: 600px;
-  height: auto;
-  -webkit-box-shadow: 15px 15px #ffffff;
-          box-shadow: 15px 15px #ffffff;
+.headerHeadlineContainer {
+  width: 65%;
+  margin-left: 4.5rem;
+  margin-top: 200px;
+  position: relative;
+}
+
+.headerHeadlineContainer::after {
+  content: url(../../assets/circle-text.png);
+  position: absolute;
+  top: -45px;
+  right: 230px;
+}
+
+.headerHeadline {
+  display: inline-block;
+  position: relative;
 }
 
 .aboutSection {
@@ -476,7 +500,7 @@ header {
 }
 
 .about {
-  width: 60%;
+  width: 55%;
   text-align: left;
 }
 
