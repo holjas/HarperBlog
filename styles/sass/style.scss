@@ -47,20 +47,48 @@ section {
 
 // Home Section
 header {
-  background-color: $primary2;
+  background-color: $primary3;
 }
-.home {
+.homeSection {
   display: flex;
   flex-direction: row;
-}
-.headerHeadline {
-  @include fontStyleHeader(7rem);
+  height: 34rem;
 }
 .homeImageContainer {
-  width: 600px;
-  height: auto;
+  margin-left: 50px;
+  margin-top: 20px;
+  width: calc(35%-50px);
+}
+.homeImageContainer img {
   box-shadow: 15px 15px $white;
 }
+.headerHeadline h1 {
+  @include fontStyleHeader(7rem);
+}
+//container
+.headerHeadlineContainer {
+  width: 65%;
+  margin-left: 4.5rem;
+  margin-top: 200px;
+  position: relative;
+}
+.headerHeadlineContainer::after {
+  content: url(../../assets/circle-text.png);
+  position: absolute;
+  top: -45px;
+  right: 230px;
+}
+//text
+.headerHeadline {
+  display: inline-block;
+  position: relative;
+}
+//image
+.headerHeadline img {
+  // float: right;
+  // width: 45%;
+}
+
 // About Section
 .aboutSection {
   display: flex;
@@ -68,9 +96,8 @@ header {
   justify-content: flex-end;
   align-items: center;
 }
-
 .about {
-  width: 60%;
+  width: 55%;
   text-align: left;
   // padding-top: 60px;
   // padding-bottom: 60px;
