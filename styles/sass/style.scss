@@ -87,13 +87,13 @@ header {
   flex-direction: column;
 }
 .headerHeadline {
-  font-size: 112px;
+  font-size: 7rem;
   font-family: $headerFont;
   text-transform: uppercase;
 }
 .imageContainer {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
 }
 // About Section
 .aboutSection {
@@ -125,20 +125,18 @@ header {
   padding-bottom: 20px;
 }
 
+//
 // fancyImageDivider Section
 .fancyImage {
   width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: red;
+  background-color: $primary4;
 }
-// .fancyImageContainer {
-//   background-color: $primary4;
-//   object-fit: contain;
-// }
-.fancyImage img {
+.imageCover {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
+
 //
 // smallContact Section
 .smallContactSection {
@@ -164,7 +162,6 @@ header {
   width: 60px;
   margin: 10px;
 }
-
 .smallContactSection h3 {
   display: inline-block;
   font-family: $headerFont;
@@ -173,11 +170,49 @@ header {
   text-transform: uppercase;
   padding-left: 20px;
 }
-
 .smallContactSection p {
   font-family: $bodyFont;
   font-size: $mainFontSize;
   letter-spacing: $letterSpacing;
-  padding-left: 80px;
+  padding-left: 100px;
   padding-bottom: 20px;
+}
+
+//
+// photoBlog Section
+
+.photoBlogSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: chocolate;
+}
+.photoBlogSection h3 {
+  display: inline-block;
+  font-family: $headerFont;
+  font-size: $headingFontSize3;
+  letter-spacing: $letterSpacing;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+.photoBlogSection p {
+  font-family: $bodyFont;
+  font-size: $mainFontSize;
+  letter-spacing: $letterSpacing;
+  padding-bottom: 20px;
+}
+.photoBlogflexItem {
+  width: 50%;
+  position: relative;
+}
+
+.photoBlogimageContainer {
+  display: flex;
+  flex-direction: flex-end;
+  width: 90%;
+  object-fit: cover;
+  // position: absolute;
+  // top: -225px;
 }
