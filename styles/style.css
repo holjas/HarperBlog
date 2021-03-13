@@ -298,10 +298,99 @@ template {
   overflow: hidden;
 }
 
+.navBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.navBar ul {
+  margin-left: 230px;
+  margin-right: 230px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  text-align: center;
+}
+
+.navBar ul li {
+  display: inline-block;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+
+.navBar a {
+  font-family: "Cabin", sans-serif;
+  font-size: 1.25rem;
+  color: #171717;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  line-height: 29px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.navBar a:hover {
+  color: #ffffff;
+}
+
+.navBar a.active {
+  color: #ffffff;
+}
+
+.navLogo {
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  color: #171717;
+  text-transform: uppercase;
+  line-height: 150%;
+  letter-spacing: 0.063rem;
+}
+
 .wrapper {
   max-width: 1220px;
   margin: 0 auto;
   padding: 100px 40px;
+}
+
+.wrapperSides {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0px 40px;
 }
 
 .wrapperSectionPrimary {
@@ -340,79 +429,6 @@ section {
   color: #ffffff;
 }
 
-.navBar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.navBar ul {
-  background-color: red;
-  margin-left: 230px;
-  margin-right: 230px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  text-align: center;
-}
-
-.navBar ul li {
-  display: inline-block;
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
-}
-
-.navBar a {
-  text-decoration: none;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-  font-family: "Oswald", sans-serif;
-  font-size: 1.25rem;
-  color: #171717;
-  text-transform: uppercase;
-}
-
-.navBar a:hover {
-  color: #ffffff;
-}
-
-.navLogo {
-  font-family: "Oswald", sans-serif;
-  font-size: 2rem;
-  color: #171717;
-  text-transform: uppercase;
-}
-
 header {
   background-color: #68b0c1;
 }
@@ -421,21 +437,26 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .headerHeadline {
-  font-size: 7rem;
   font-family: "Oswald", sans-serif;
+  font-size: 7rem;
+  color: #171717;
   text-transform: uppercase;
+  line-height: 150%;
+  letter-spacing: 0.063rem;
 }
 
-.imageContainer {
-  width: 100%;
-  height: 100%;
+.homeImageContainer {
+  width: 600px;
+  height: auto;
+  -webkit-box-shadow: 15px 15px #ffffff;
+          box-shadow: 15px 15px #ffffff;
 }
 
 .aboutSection {
@@ -462,16 +483,20 @@ header {
 .aboutSection h2 {
   font-family: "Oswald", sans-serif;
   font-size: 2.625rem;
-  letter-spacing: 0.063rem;
+  color: #171717;
   text-transform: uppercase;
-  background-color: #f6f6f6;
+  line-height: 150%;
+  letter-spacing: 0.063rem;
   padding-bottom: 20px;
 }
 
 .aboutSection p {
   font-family: "Cabin", sans-serif;
   font-size: 1.25rem;
-  letter-spacing: 0.063rem;
+  color: #171717;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  line-height: 32px;
   padding-bottom: 20px;
 }
 
@@ -525,18 +550,23 @@ header {
 }
 
 .smallContactSection h3 {
-  display: inline-block;
   font-family: "Oswald", sans-serif;
   font-size: 2rem;
-  letter-spacing: 0.063rem;
+  color: #171717;
   text-transform: uppercase;
+  line-height: 150%;
+  letter-spacing: 0.063rem;
+  display: inline-block;
   padding-left: 20px;
 }
 
 .smallContactSection p {
   font-family: "Cabin", sans-serif;
   font-size: 1.25rem;
-  letter-spacing: 0.063rem;
+  color: #171717;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  line-height: 32px;
   padding-left: 100px;
   padding-bottom: 20px;
 }
@@ -557,39 +587,163 @@ header {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: chocolate;
+}
+
+.photoBlogSectionRowRev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .photoBlogSection h3 {
   display: inline-block;
   font-family: "Oswald", sans-serif;
   font-size: 2rem;
-  letter-spacing: 0.063rem;
+  color: #171717;
   text-transform: uppercase;
-  padding-bottom: 20px;
+  line-height: 150%;
+  letter-spacing: 0.063rem;
 }
 
 .photoBlogSection p {
   font-family: "Cabin", sans-serif;
   font-size: 1.25rem;
-  letter-spacing: 0.063rem;
-  padding-bottom: 20px;
+  color: #171717;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  line-height: 32px;
 }
 
-.photoBlogflexItem {
-  width: 50%;
-  position: relative;
-}
-
-.photoBlogimageContainer {
+.photoBlogflexItem,
+.photoBlogflexItem2 {
+  width: calc(50% - 30px);
+  height: 100%;
+  background-color: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.photoBlogflexItem2 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
       -ms-flex-direction: flex-end;
           flex-direction: flex-end;
-  width: 90%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  text-align: left;
+}
+
+.photoBlogPdLeft {
+  margin-left: 60px;
+  padding-bottom: 20px;
+}
+
+.photoBlogimageContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.harperJourneySection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.smallJourneyImage {
+  width: 35%;
+}
+
+.smallJourneyImage img {
+  -webkit-box-shadow: 15px 15px #227284;
+          box-shadow: 15px 15px #227284;
+}
+
+.smallJourneyText {
+  width: 65%;
+}
+
+.smallJourneyText h3 {
+  display: inline-block;
+  font-family: "Oswald", sans-serif;
+  font-size: 2.625rem;
+  color: #171717;
+  text-transform: uppercase;
+  line-height: 150%;
+  letter-spacing: 0.063rem;
+  padding-bottom: 20px;
+}
+
+.smallJourneyText p {
+  font-family: "Cabin", sans-serif;
+  font-size: 1.25rem;
+  color: #171717;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  line-height: 32px;
+  padding-bottom: 20px;
+}
+
+.imageGallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.imageGalleryItem {
+  width: calc(100% / 3 - 40px);
+}
+
+footer {
+  font-family: "Cabin", sans-serif;
+  font-size: 1.25rem;
+  color: #171717;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  line-height: 32px;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  background-color: #171717;
 }
