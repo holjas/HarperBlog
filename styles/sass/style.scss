@@ -1,8 +1,16 @@
 @import "./variables";
 @import "./setup";
 @import "./mixins";
-//
 @import "./navBar";
+@import "./footer";
+@import "./imageGallery";
+@import "./journey";
+@import "./about";
+//
+//blog styling
+@import "./blog";
+@import "./contact";
+
 // General & Shared Stylings
 .wrapper {
   max-width: 1220px;
@@ -24,7 +32,8 @@ section {
   margin: 0;
   padding: 0;
 }
-.btn {
+.btn,
+button {
   font-family: $headerFont;
   font-size: $mainFontSize;
   letter-spacing: $letterSpacing;
@@ -34,13 +43,16 @@ section {
   background-color: $accent;
   border: transparent;
 }
-.btn a {
+.btn a,
+button {
   color: $black;
   text-decoration: none;
   transition: 0.7s;
 }
 .btn a:hover,
-.btn a:focus {
+.btn a:focus,
+button:hover,
+button:focus {
   color: $white;
 }
 // OTHER STYLING
@@ -78,50 +90,9 @@ header {
   top: -45px;
   right: 230px;
 }
-//text
 .headerHeadline {
   display: inline-block;
   position: relative;
-}
-//image
-.headerHeadline img {
-  // float: right;
-  // width: 45%;
-}
-
-// About Section
-.aboutSection {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-}
-.about {
-  width: 55%;
-  text-align: left;
-  // padding-top: 60px;
-  // padding-bottom: 60px;
-  // padding: 100px 40px;
-}
-.aboutSection h2 {
-  @include fontStyleHeader($headingFontSize2);
-  padding-bottom: $paddingBottom;
-}
-.aboutSection p {
-  @include fontStyleMain(32px, 0px);
-  padding-bottom: $paddingBottom;
-}
-
-//
-// fancyImageDivider Section
-.fancyImage {
-  width: 100%;
-  background-color: $primary4;
-}
-.imageCover {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
 }
 
 //
@@ -177,21 +148,19 @@ header {
   align-items: center;
   flex-wrap: wrap;
 }
-
 .photoBlogSection h3 {
   display: inline-block;
   @include fontStyleHeader($headingFontSize3);
-  // padding-bottom: 20px;
+  padding-bottom: $paddingBottom;
 }
 .photoBlogSection p {
   @include fontStyleMain(32px, 0px);
-  // padding-bottom: 20px;
+  padding-bottom: $paddingBottom;
 }
 .photoBlogflexItem,
 .photoBlogflexItem2 {
   width: calc(50% - 30px);
   height: 100%;
-  background-color: red;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -208,7 +177,6 @@ header {
 .photoBlogPdRigt {
   // padding-right: 60px;
 }
-
 .photoBlogimageContainer {
   width: 100%;
   height: 100%;
@@ -217,51 +185,3 @@ header {
 // .photoBlogImage {
 //   object-fit: cover;
 // }
-
-//harperJourney Section
-.harperJourneySection {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.smallJourneyImage {
-  width: 35%;
-}
-.smallJourneyImage img {
-  box-shadow: 15px 15px $primary1;
-}
-.smallJourneyText {
-  width: 65%;
-}
-.smallJourneyText h3 {
-  display: inline-block;
-  @include fontStyleHeader($headingFontSize2);
-  padding-bottom: $paddingBottom;
-}
-.smallJourneyText p {
-  @include fontStyleMain(32px, 0px);
-  padding-bottom: $paddingBottom;
-}
-//
-// imageGallery
-.imageGallery {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: center;
-}
-.imageGalleryItem {
-  width: calc(100% / 3 - 40px);
-}
-//
-//footer
-footer {
-  @include fontStyleMain(32px, 0px);
-  color: $white;
-  padding: 20px;
-  text-align: center;
-  background-color: $black;
-}
-//
