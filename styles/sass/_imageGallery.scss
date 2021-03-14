@@ -1,0 +1,9 @@
+.imageGallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+.imageGalleryItem {
+  width: calc(100% / 3 - 40px);
+}

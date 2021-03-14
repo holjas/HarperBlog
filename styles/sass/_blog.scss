@@ -1,0 +1,149 @@
+.blogHeaderImage {
+  width: 100%;
+  background-color: $primary3;
+  position: relative;
+}
+.blogHeaderImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.blogHeaderImage:after {
+  content: "blog";
+  @include fontStyleHeader($headingFontSize1);
+  position: absolute;
+  left: calc(5% + 20px);
+  bottom: -50px;
+}
+.blogSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+// asideBlog Section
+.asideBlog {
+  width: calc(30% - 50px);
+}
+.asideBlogItem1,
+.asideBlogItem2 {
+  background-color: $white;
+  border: 40px solid $white;
+}
+.asideBlogItem1 {
+  margin-bottom: 40px;
+}
+.asideBlogItem1 h4 {
+  @include fontStyleHeader($headingFontSize4);
+  padding: $paddingTop 0;
+}
+.asideBlogItem2 h4 {
+  @include fontStyleHeader($headingFontSize4);
+  padding-bottom: $paddingBottom;
+}
+.asideBlog p,
+.asideBlog ul li {
+  @include fontStyleMain(32px, 0px);
+}
+.asideBlog ul {
+  padding-left: 40px;
+}
+
+// mainBlog Section
+.mainBlog {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+.mainBlog h3 {
+  @include fontStyleHeader($headingFontSize3);
+}
+.mainBlog p {
+  @include fontStyleMain(32px, 0px);
+  padding: 10px 0;
+}
+.mainBlogEntry {
+  padding-bottom: 100px;
+  border-bottom: 5px solid $primary1;
+  background-color: $white;
+  border: 40px solid $white;
+}
+.divider {
+  width: 100%;
+  height: 5px;
+  background-color: $primary1;
+}
+// mainBlogComments
+.mainBlogComments {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 40px;
+  background-color: $white;
+}
+.mainBlogItem1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.mainBlogItemImage {
+  width: 15%;
+}
+.mainBlogItemText {
+  width: 85%;
+}
+
+//commentBlog
+.commentBlog {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: 20px;
+}
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+input[type="text"],
+input[type="email"] {
+  padding: 20px;
+  height: 32px;
+  width: calc(45% - 15px);
+  margin-bottom: $paddingBottom;
+  border: transparent;
+}
+legend,
+label {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+  visibility: hidden;
+}
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea {
+  @include fontStyleMain(32px, 0);
+}
+textarea {
+  width: 100%;
+  height: 200px;
+  resize: none;
+  padding: $paddingTop;
+  margin-bottom: $paddingBottom;
+  border: transparent;
+}
+button {
+  width: 100%;
+}
