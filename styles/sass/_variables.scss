@@ -21,5 +21,22 @@ $mainFontSize: 1.25rem;
 $letterSpacing: 0.063rem;
 $lineSpacing: 150%;
 
-$paddingTop: 20px;
-$paddingBottom: 20px;
+$padding: 20px;
+
+//
+@mixin fontStyleHeader($sizeInput) {
+  font-family: $headerFont;
+  font-size: $sizeInput;
+  color: $black;
+  text-transform: uppercase;
+  line-height: $lineSpacing;
+  letter-spacing: $letterSpacing;
+}
+
+@mixin fontStyleMain($lineInput, $letterInput) {
+  font-family: $bodyFont;
+  font-size: $mainFontSize;
+  color: $black;
+  letter-spacing: $letterInput;
+  line-height: $lineInput;
+}

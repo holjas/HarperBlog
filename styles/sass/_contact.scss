@@ -29,16 +29,21 @@
   padding: 40px;
 }
 
-.asideContact h4 {
+.asideContact h4,
+.asideContact a {
   @include fontStyleHeader($headingFontSize3);
   display: inline-block;
   color: $primary1;
-  padding: 0 15px $paddingBottom 15px;
+  padding: 0 5px $padding 5px;
+}
+.asideContact a:hover,
+.asideContact a:focus {
+  color: $primary2;
 }
 .asideContact h3 {
   @include fontStyleHeader($headingFontSize4);
   text-transform: lowercase;
-  padding-bottom: $paddingBottom;
+  padding-bottom: $padding;
 }
 .asideContact p {
   @include fontStyleMain(32px, 0px);
@@ -60,6 +65,7 @@
   align-items: center;
   position: relative;
 }
+
 form {
   display: flex;
   flex-direction: row;
@@ -73,7 +79,7 @@ input[type="email"] {
   padding: 20px;
   height: 32px;
   width: calc(45% - 15px);
-  margin-bottom: $paddingBottom;
+  margin-bottom: $padding;
   border: transparent;
 }
 legend,
@@ -92,8 +98,8 @@ textarea {
   width: 100%;
   height: 300px;
   resize: none;
-  padding: $paddingTop;
-  margin-bottom: $paddingBottom;
+  padding: $padding;
+  margin-bottom: $padding;
   border: transparent;
 }
 .commentContact button {
