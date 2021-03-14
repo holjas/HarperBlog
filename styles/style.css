@@ -798,7 +798,7 @@ textarea {
   border: transparent;
 }
 
-button {
+.commentBlog button {
   width: 100%;
 }
 
@@ -1001,7 +1001,7 @@ textarea {
   border: transparent;
 }
 
-button {
+.commentContact button {
   width: 100%;
 }
 
@@ -1100,10 +1100,10 @@ header {
 }
 
 .headerHeadlineContainer::after {
-  content: url(../../assets/circle-text.png);
+  content: url(../assets/circle-text.png);
   position: absolute;
-  top: -45px;
-  right: 230px;
+  top: -35px;
+  left: 260px;
 }
 
 .headerHeadline {
@@ -1257,7 +1257,28 @@ header {
   padding-bottom: 20px;
 }
 
-.photoBlogimageContainer {
+.photoBlogimageContainer1 {
   width: 100%;
   height: 100%;
+  margin-top: -40px;
+  -webkit-box-shadow: -500px 20px #68b0c1;
+          box-shadow: -500px 20px #68b0c1;
+}
+
+.photoBlogimageContainer2 {
+  width: 100%;
+  height: 100%;
+  margin-top: 40px;
+  -webkit-box-shadow: 500px 20px #68b0c1;
+          box-shadow: 500px 20px #68b0c1;
+}
+
+.photoBlogimageContainer1 img {
+  -webkit-box-shadow: -20px 20px #68b0c1;
+          box-shadow: -20px 20px #68b0c1;
+}
+
+.photoBlogimageContainer2 img {
+  -webkit-box-shadow: 20px 20px #68b0c1;
+          box-shadow: 20px 20px #68b0c1;
 }
