@@ -25,6 +25,12 @@
 .wrapperSectionWhite {
   background-color: $white;
 }
+.marginLeft {
+  margin-left: 60px;
+}
+.marginRight {
+  margin-right: 60px;
+}
 section {
   margin: 0;
   padding: 0;
@@ -55,7 +61,10 @@ a:hover,
 a:focus {
   color: $white;
 }
-
-//
-
-//
+legend,
+label {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+  visibility: hidden;
+}
