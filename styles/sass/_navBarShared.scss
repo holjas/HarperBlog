@@ -4,11 +4,11 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: $paddingTop 0;
+  padding: $padding 0;
 }
 .navBar ul {
-  margin-left: 230px;
-  margin-right: 230px;
+  margin-left: 15%;
+  margin-right: 15%;
   display: flex;
   flex-grow: 1;
   justify-content: space-evenly;

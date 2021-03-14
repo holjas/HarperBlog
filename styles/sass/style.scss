@@ -1,11 +1,8 @@
 @import "./variables";
 @import "./setup";
-@import "./mixins";
-@import "./navBar";
-@import "./footer";
-@import "./imageGallery";
-@import "./journey";
-@import "./about";
+@import "./navBarShared";
+@import "./footerShared";
+@import "./home";
 //
 //blog styling
 @import "./blog";
@@ -44,152 +41,21 @@ button {
   border: transparent;
 }
 .btn a,
-button {
+button,
+a {
   color: $black;
   text-decoration: none;
-  transition: 0.7s;
+  transition: 0.4s;
 }
 .btn a:hover,
 .btn a:focus,
 button:hover,
-button:focus {
+button:focus,
+a:hover,
+a:focus {
   color: $white;
 }
-// OTHER STYLING
-
-// Home Section
-header {
-  background-color: $primary3;
-}
-.homeSection {
-  display: flex;
-  flex-direction: row;
-  height: 34rem;
-}
-.homeImageContainer {
-  margin-left: 50px;
-  margin-top: 20px;
-  width: calc(35%-50px);
-}
-.homeImageContainer img {
-  box-shadow: 15px 15px $white;
-}
-.headerHeadline h1 {
-  @include fontStyleHeader(7rem);
-}
-//container
-.headerHeadlineContainer {
-  width: 65%;
-  margin-left: 4.5rem;
-  margin-top: 200px;
-  position: relative;
-}
-.headerHeadlineContainer::after {
-  content: url(../assets/circle-text.png);
-  position: absolute;
-  top: -35px;
-  left: 260px;
-}
-.headerHeadline {
-  display: inline-block;
-  position: relative;
-}
 
 //
-// smallContact Section
-.smallContactSection {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.smallContact {
-  width: 50%;
-}
-.smallContactSection i {
-  font-size: $headingFontSize4;
-}
-.smallCircle {
-  display: inline-block;
-  background-color: $primary3;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 70px;
-  height: 60px;
-  width: 60px;
-  margin: 10px;
-}
-.smallContactSection h3 {
-  @include fontStyleHeader($headingFontSize3);
-  display: inline-block;
-  padding-left: 20px;
-}
-.smallContactSection p {
-  @include fontStyleMain(32px, 0px);
-  padding-left: 100px;
-  padding-bottom: $paddingBottom;
-}
 
 //
-// photoBlog Section
-
-.photoBlogSection {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.photoBlogSectionRowRev {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.photoBlogSection h3 {
-  display: inline-block;
-  @include fontStyleHeader($headingFontSize3);
-  padding-bottom: $paddingBottom;
-}
-.photoBlogSection p {
-  @include fontStyleMain(32px, 0px);
-  padding-bottom: $paddingBottom;
-}
-.photoBlogflexItem,
-.photoBlogflexItem2 {
-  width: calc(50% - 30px);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-}
-.photoBlogflexItem2 {
-  flex-direction: flex-end;
-  text-align: left;
-}
-.photoBlogPdLeft {
-  margin-left: 60px;
-  padding-bottom: $paddingBottom;
-}
-
-.photoBlogimageContainer1 {
-  width: 100%;
-  height: 100%;
-  margin-top: -40px;
-  box-shadow: -500px 20px $primary2;
-}
-.photoBlogimageContainer2 {
-  width: 100%;
-  height: 100%;
-  margin-top: 40px;
-  box-shadow: 500px 20px $primary2;
-}
-.photoBlogimageContainer1 img {
-  box-shadow: -20px 20px $primary2;
-}
-.photoBlogimageContainer2 img {
-  box-shadow: 20px 20px $primary2;
-}

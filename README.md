@@ -7,7 +7,7 @@
 **Commenting Guidelines**
 
 - Comments should be on their own line(s).
-  > Avoid the use of end-of-line comments.
+- Avoid the use of end-of-line comments.
 
 **Formatting**
 
@@ -20,6 +20,7 @@
 **General Styling Notes**
 
 - HTML font size 125%
+- HARPER headline should be 7rem(140px)
 - Site is needs to be responsive. Mobile should have good UI
 - Flexbox must be used
 - Sass variables need to be used (see below for their assignment)
@@ -27,10 +28,9 @@
 - All images should have descriptive alt descriptions
 - All forms need to use proper accessibility techniques
 - Github repo should be names firstname-lastname-project-one (follow project naming convention)
-  > - Nav Height 15px;
-  > - Wrapper Padding 20px;
-  > - Hover/Focus Effects
-  >   Nav Menu & Button : hover/focus should transition text to $white
+- Wrapper Padding 20px;
+- Hover/Focus Effects
+  - Nav Menu & Button : hover/focus should transition text to $white
 
 **Variable Names**
 
@@ -41,12 +41,13 @@
 - $primary4 - #F6F6F6 - white shade
 - $black - #171717 - black
 - $white - #FFFFFF - white
+
 - $headerFont - "Oswald", sans-serif
 - $bodyFont - "Cabin", sans-serif
 
-> - $headingFontSize1 - 80px
-> - $headingFontSize2 - 42px
-> - $headingFontSize3 - 32px
-> - $headingFontSize4 - 24px
-> - $mainFontSize - 20px
-> - $letterSpacing - 1px
+- $headingFontSize1 - 80px
+- $headingFontSize2 - 42px
+- $headingFontSize3 - 32px
+- $headingFontSize4 - 24px
+- $mainFontSize - 20px
+- $letterSpacing - 1px
