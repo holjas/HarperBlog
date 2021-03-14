@@ -85,10 +85,10 @@ header {
   position: relative;
 }
 .headerHeadlineContainer::after {
-  content: url(../../assets/circle-text.png);
+  content: url(../assets/circle-text.png);
   position: absolute;
-  top: -45px;
-  right: 230px;
+  top: -35px;
+  left: 260px;
 }
 .headerHeadline {
   display: inline-block;
@@ -174,14 +174,22 @@ header {
   margin-left: 60px;
   padding-bottom: $paddingBottom;
 }
-.photoBlogPdRigt {
-  // padding-right: 60px;
-}
-.photoBlogimageContainer {
+
+.photoBlogimageContainer1 {
   width: 100%;
   height: 100%;
-  // object-fit: contain;
+  margin-top: -40px;
+  box-shadow: -500px 20px $primary2;
 }
-// .photoBlogImage {
-//   object-fit: cover;
-// }
+.photoBlogimageContainer2 {
+  width: 100%;
+  height: 100%;
+  margin-top: 40px;
+  box-shadow: 500px 20px $primary2;
+}
+.photoBlogimageContainer1 img {
+  box-shadow: -20px 20px $primary2;
+}
+.photoBlogimageContainer2 img {
+  box-shadow: 20px 20px $primary2;
+}
