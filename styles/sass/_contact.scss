@@ -22,7 +22,7 @@
   justify-content: center;
   align-items: flex-start;
 }
-// asideBlog Section
+// asideContact Section
 .asideContact {
   width: calc(30% - 50px);
   background-color: $white;
@@ -59,14 +59,14 @@
   margin-left: 20px;
 }
 .commentContact {
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   position: relative;
 }
-
-form {
+.commentForm form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -74,27 +74,20 @@ form {
   flex-wrap: wrap;
   width: 100%;
 }
-input[type="text"],
-input[type="email"] {
-  padding: 20px;
+.commentForm input[type="text"],
+.commentForm input[type="email"] {
+  padding: $padding;
   height: 32px;
   width: calc(45% - 15px);
   margin-bottom: $padding;
   border: transparent;
 }
-legend,
-label {
-  position: absolute !important;
-  top: -9999px !important;
-  left: -9999px !important;
-  visibility: hidden;
-}
-input[type="text"]::placeholder,
-input[type="email"]::placeholder,
-textarea {
+.commentForm input[type="text"]::placeholder,
+.commentForm input[type="email"]::placeholder,
+.commentForm textarea {
   @include fontStyleMain(32px, 0);
 }
-textarea {
+.commentForm textarea {
   width: 100%;
   height: 300px;
   resize: none;
@@ -104,4 +97,53 @@ textarea {
 }
 .commentContact button {
   width: 100%;
+}
+
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+//mediaQueries
+@media (max-width: 1100px) {
+  .contactSection,
+  .mainContact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  .asideContact {
+    width: 90%;
+    margin: 0 40px;
+  }
+  .asideContact h4,
+  .asideContact a {
+    padding: 0 5px 10px 5px;
+  }
+  .mainContact {
+    width: 100%;
+    margin: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .commentContact {
+    margin: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  form {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: $padding;
+  }
+  .commentForm input[type="text"],
+  .commentForm input[type="email"] {
+    height: 40px;
+    width: 100%;
+  }
 }
