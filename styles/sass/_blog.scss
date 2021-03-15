@@ -130,4 +130,15 @@
   .asideBlogItem2 {
     display: none;
   }
+  .contactIcons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+  }
+  .contactText {
+    padding: $paddingLarge 0;
+    width: 80%;
+  }
 }
