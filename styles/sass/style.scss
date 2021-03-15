@@ -2,6 +2,7 @@
 @import "./setup";
 @import "./navBarShared";
 @import "./footerShared";
+@import "./formShared";
 @import "./home";
 //
 //blog styling
@@ -60,11 +61,4 @@ button:focus,
 a:hover,
 a:focus {
   color: $white;
-}
-legend,
-label {
-  position: absolute !important;
-  top: -9999px !important;
-  left: -9999px !important;
-  visibility: hidden;
 }
