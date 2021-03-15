@@ -481,7 +481,7 @@ textarea {
   border: transparent;
 }
 
-button {
+.btnLarge {
   width: 100%;
 }
 
@@ -758,7 +758,6 @@ header {
 .photoBlogflexItem,
 .photoBlogflexItem2 {
   width: calc(50% - 30px);
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -923,6 +922,11 @@ header {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .photoBlogflexItem,
+  .photoBlogflexItem2 {
+    padding: 0;
+    margin: 0;
+  }
   .photoBlogimageContainer1,
   .photoBlogimageContainer2 {
     display: -webkit-box;
@@ -937,7 +941,7 @@ header {
             box-shadow: none;
   }
   .photoBlogSection h3 {
-    padding-top: 40px;
+    padding-top: 60px;
   }
   .photoBlogSection p {
     padding-bottom: 40px;
@@ -1421,7 +1425,7 @@ button {
   letter-spacing: 0.063rem;
   text-transform: uppercase;
   text-align: center;
-  padding: 10px 30px;
+  padding: 20px 50px;
   background-color: #f38d8d;
   border: transparent;
 }

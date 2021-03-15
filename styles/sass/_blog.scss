@@ -28,10 +28,10 @@
 .asideBlogItem1,
 .asideBlogItem2 {
   background-color: $white;
-  border: 40px solid $white;
+  border: $paddingLarge solid $white;
 }
 .asideBlogItem1 {
-  margin-bottom: 40px;
+  margin-bottom: $paddingLarge;
 }
 .asideBlogItem1 h4 {
   @include fontStyleHeader($headingFontSize4);
@@ -46,7 +46,7 @@
   @include fontStyleMain(32px, 0px);
 }
 .asideBlog ul {
-  padding-left: 40px;
+  padding-left: $paddingLarge;
 }
 
 // mainBlog Section
@@ -56,7 +56,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-left: 20px;
+  margin-left: $padding;
 }
 .mainBlog h3 {
   @include fontStyleHeader($headingFontSize3);
@@ -69,7 +69,7 @@
   padding-bottom: 100px;
   border-bottom: 5px solid $primary1;
   background-color: $white;
-  border: 40px solid $white;
+  border: $paddingLarge solid $white;
 }
 .divider {
   width: 100%;
@@ -84,7 +84,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  padding: $paddingLarge;
   background-color: $white;
 }
 .mainBlogComments2 {

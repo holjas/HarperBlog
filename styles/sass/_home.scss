@@ -19,7 +19,7 @@ header {
 }
 .homeImageContainer {
   margin-left: 50px;
-  margin-top: 20px;
+  margin-top: $padding;
   width: calc(35%-50px);
 }
 .homeImageContainer img {
@@ -104,7 +104,7 @@ header {
 .smallContactSection h3 {
   @include fontStyleHeader($headingFontSize3);
   display: inline-block;
-  padding-left: 20px;
+  padding-left: $padding;
 }
 .smallContactSection h3:hover,
 .smallContactSection h3:focus {
@@ -146,7 +146,7 @@ header {
 .photoBlogflexItem,
 .photoBlogflexItem2 {
   width: calc(50% - 30px);
-  height: 100%;
+  // height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -163,19 +163,19 @@ header {
   width: 100%;
   height: 100%;
   margin-top: -40px;
-  box-shadow: -100px 20px $primary2;
+  box-shadow: -100px $padding $primary2;
 }
 .photoBlogimageContainer2 {
   width: 100%;
   height: 100%;
   margin-top: 40px;
-  box-shadow: 100px 20px $primary2;
+  box-shadow: 100px $padding $primary2;
 }
 .photoBlogimageContainer1 img {
-  box-shadow: 20px 20px $primary2;
+  box-shadow: $padding $padding $primary2;
 }
 .photoBlogimageContainer2 img {
-  box-shadow: 20px 20px $primary2;
+  box-shadow: $padding $padding $primary2;
 }
 
 ///////////////////////////////////////////////////
@@ -250,6 +250,11 @@ header {
     align-items: center;
     justify-content: center;
   }
+  .photoBlogflexItem,
+  .photoBlogflexItem2 {
+    padding: 0;
+    margin: 0;
+  }
   .photoBlogimageContainer1,
   .photoBlogimageContainer2 {
     display: flex;
@@ -258,7 +263,7 @@ header {
     box-shadow: none;
   }
   .photoBlogSection h3 {
-    padding-top: $paddingLarge;
+    padding-top: 60px;
   }
   .photoBlogSection p {
     padding-bottom: $paddingLarge;
