@@ -1,7 +1,7 @@
 footer {
   @include fontStyleMain(32px, 0px);
   color: $white;
-  padding: 20px;
+  padding: $padding;
   text-align: center;
   background-color: $black;
 }
