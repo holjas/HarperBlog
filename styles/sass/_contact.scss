@@ -93,8 +93,9 @@
     padding: 0;
   }
   .asideContact {
-    width: 90%;
-    margin: 0 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
   }
   .asideContact h4,
   .asideContact a {

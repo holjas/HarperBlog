@@ -52,6 +52,9 @@ button {
 ///////////////////////////////////////////////////
 //mediaQueries
 @media (max-width: 1100px) {
+  .formShared {
+    width: 100%;
+  }
   form {
     width: 100%;
     flex-direction: column;
@@ -60,9 +63,8 @@ button {
     align-content: center;
     margin-top: $padding;
   }
-  .commentForm input[type="text"],
-  .commentForm input[type="email"] {
-    height: 3rem;
+  input[type="text"],
+  input[type="email"] {
     width: 100%;
   }
 }
