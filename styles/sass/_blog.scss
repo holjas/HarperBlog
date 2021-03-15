@@ -74,73 +74,35 @@
 .divider {
   width: 100%;
   height: 5px;
+  margin-bottom: $padding;
   background-color: $primary1;
 }
 // mainBlogComments
-.mainBlogComments {
+.mainBlogComments,
+.mainBlogComments2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
   padding: 40px;
   background-color: $white;
 }
-.mainBlogItem1 {
+.mainBlogComments2 {
+  margin-top: $padding;
+}
+.mainBlogItem1,
+.mainBlogItem2 {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
 }
+
 .mainBlogItemImage {
   width: 15%;
 }
 .mainBlogItemText {
   width: 85%;
-}
-
-//commentBlog
-.commentBlog {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  margin-top: 20px;
-}
-.blogCommentForm form {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-}
-.blogCommentForm input[type="text"],
-.blogCommentForm input[type="email"] {
-  padding: 20px;
-  height: 32px;
-  width: calc(45% - 15px);
-  margin-bottom: $padding;
-  border: transparent;
-}
-
-.blogCommentForm input[type="text"]::placeholder,
-.blogCommentForm input[type="email"]::placeholder,
-.blogCommentForm textarea {
-  @include fontStyleMain(32px, 0);
-}
-.blogCommentForm textarea {
-  width: 100%;
-  height: 200px;
-  resize: none;
-  padding: $padding;
-  margin-bottom: $padding;
-  border: transparent;
-}
-.commentBlog button {
-  width: 100%;
 }
 
 ///////////////////////////////////////////////////
@@ -167,19 +129,5 @@
   }
   .asideBlogItem2 {
     display: none;
-  }
-
-  form {
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    margin-top: $padding;
-  }
-  .commentBlog input[type="text"],
-  .commentBlog input[type="email"] {
-    height: 40px;
-    width: 100%;
   }
 }
