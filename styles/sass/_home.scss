@@ -138,7 +138,6 @@ header {
   padding-bottom: $padding;
   margin-right: auto;
 }
-
 .photoBlogSection p {
   @include fontStyleMain(32px, 0px);
   padding-bottom: $padding;
@@ -146,7 +145,6 @@ header {
 .photoBlogflexItem,
 .photoBlogflexItem2 {
   width: calc(50% - 30px);
-  // height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -241,35 +239,40 @@ header {
   .photoBlogSection,
   .photoBlogSectionRowRev {
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
   }
-  .photoBlogflexItem,
-  .photoBlogflexItem2 {
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+  .photoBlogSection h3,
+  .photoBlogSectionRowRev h3 {
+    padding: 0;
   }
   .photoBlogflexItem,
   .photoBlogflexItem2 {
     padding: 0;
     margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .photoBlogflexItem2 {
+    margin-bottom: $paddingLarge;
   }
   .photoBlogimageContainer1,
   .photoBlogimageContainer2 {
+    box-shadow: none;
     display: flex;
     justify-content: center;
-    align-content: center;
-    box-shadow: none;
+    align-items: center;
   }
-  .photoBlogSection h3 {
-    padding-top: 60px;
+  .photoBlogflexItem2 h3,
+  .photoBlogflexItem2 p {
+    margin-left: 60px;
+    padding-top: $paddingLarge;
   }
-  .photoBlogSection p {
-    padding-bottom: $paddingLarge;
-  }
-  .photoBlogSection button {
-    margin-bottom: $paddingLarge;
+  .photoBlogflexItem h3,
+  .photoBlogflexItem p {
+    padding-top: $paddingLarge;
   }
 }
 @media (max-width: 961px) {
@@ -308,5 +311,23 @@ header {
   //imageGallery Section
   .imageGalleryItem {
     width: calc(100% / 3 - 15px);
+  }
+}
+
+@media (max-width: 660px) {
+  .harperJourneySection {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .smallJourneyImage {
+    display: none;
+  }
+  .smallJourneyText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 }
