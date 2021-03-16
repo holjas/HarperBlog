@@ -305,4 +305,8 @@ header {
   .smallContact {
     width: 100%;
   }
+  //imageGallery Section
+  .imageGalleryItem {
+    width: calc(100% / 3 - 15px);
+  }
 }
