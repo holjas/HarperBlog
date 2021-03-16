@@ -39,3 +39,13 @@
 .navLogo {
   @include fontStyleHeader($headingFontSize3);
 }
+
+@media (max-width: 961px) {
+  .navBar ul {
+    margin: 0 auto;
+    justify-content: space-evenly;
+  }
+  .navBar ul li:nth-child(3) {
+    display: none;
+  }
+}

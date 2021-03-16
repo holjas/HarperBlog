@@ -34,7 +34,7 @@ header {
   margin-top: 200px;
   position: relative;
 }
-.headerHeadlineContainer::after {
+.headerHeadlineContainer h1::after {
   content: url(../assets/circle-text.png);
   position: absolute;
   top: -35px;
@@ -220,7 +220,7 @@ header {
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
 //mediaQueries
-@media (max-width: 1100px) {
+@media (max-width: 1140px) {
   //homeSection
   .homeImageContainer {
     margin-left: 10px;
@@ -270,5 +270,39 @@ header {
   }
   .photoBlogSection button {
     margin-bottom: $paddingLarge;
+  }
+}
+@media (max-width: 961px) {
+  //homeSection
+  .homeSection {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 25rem;
+  }
+  .headerHeadlineContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    margin: 0;
+  }
+  .headerHeadline {
+    width: 100%;
+    text-align: center;
+  }
+  .headerHeadlineContainer::after {
+    position: absolute;
+    left: 300px;
+  }
+  .homeImageContainer {
+    display: none;
+  }
+  //smallContact Section
+  .smallContactSection {
+    flex-direction: column;
+  }
+  .smallContact {
+    width: 100%;
   }
 }
