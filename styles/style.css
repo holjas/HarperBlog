@@ -380,6 +380,10 @@ template {
   letter-spacing: 0.063rem;
 }
 
+.navBar ul li:first-child {
+  display: none;
+}
+
 @media (max-width: 961px) {
   .navBar ul {
     margin: 0 auto;
@@ -387,8 +391,24 @@ template {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  .navBar ul li:nth-child(3) {
+  .navBar ul li:nth-child(4) {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navBar ul li {
+    display: none;
+  }
+  .navBar ul li:first-child {
+    display: inline-block;
+    font-size: 2rem;
+  }
+  .navBar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
   }
 }
 
@@ -788,6 +808,12 @@ header {
           justify-content: flex-end;
 }
 
+.photoBlogflexItem h3,
+.photoBlogflexItem p,
+.photoBlogflexItem button {
+  margin-left: 60px;
+}
+
 .photoBlogflexItem2 {
   -webkit-box-align: end;
       -ms-flex-align: end;
@@ -798,20 +824,26 @@ header {
   text-align: left;
 }
 
+.photoBlogflexItem2 h3,
+.photoBlogflexItem2 p,
+.photoBlogflexItem2 button {
+  margin-right: 60px;
+}
+
 .photoBlogimageContainer1 {
   width: 100%;
   height: 100%;
   margin-top: -40px;
-  -webkit-box-shadow: -100px 20px #68b0c1;
-          box-shadow: -100px 20px #68b0c1;
+  -webkit-box-shadow: -300px 20px #68b0c1;
+          box-shadow: -300px 20px #68b0c1;
 }
 
 .photoBlogimageContainer2 {
   width: 100%;
   height: 100%;
   margin-top: 40px;
-  -webkit-box-shadow: 100px 20px #68b0c1;
-          box-shadow: 100px 20px #68b0c1;
+  -webkit-box-shadow: 300px 20px #68b0c1;
+          box-shadow: 300px 20px #68b0c1;
 }
 
 .photoBlogimageContainer1 img,
@@ -836,6 +868,10 @@ header {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.journeyImageContainer {
+  margin-right: 60px;
 }
 
 .smallJourneyImage {
@@ -940,7 +976,7 @@ header {
             justify-content: center;
   }
   .photoBlogflexItem2 {
-    margin-bottom: 40px;
+    margin-bottom: 100px;
   }
   .photoBlogimageContainer1,
   .photoBlogimageContainer2 {
@@ -961,9 +997,20 @@ header {
     margin-left: 60px;
     padding-top: 40px;
   }
-  .photoBlogflexItem h3,
-  .photoBlogflexItem p {
+  .photoBlogflexItem2 button {
+    margin-right: 0;
+  }
+  .photoBlogflexItem h3 {
     padding-top: 40px;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  .photoBlogflexItem p {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  .photoBlogflexItem button {
+    margin-left: 0;
   }
 }
 
@@ -1022,6 +1069,13 @@ header {
     -webkit-box-shadow: 10px 10px #68b0c1;
             box-shadow: 10px 10px #68b0c1;
   }
+  .photoBlogSection h3,
+  .photoBlogSection p,
+  .photoBlogflexItem2 h3,
+  .photoBlogflexItem2 p {
+    margin: 0;
+    text-align: center;
+  }
   .harperJourneySection {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1052,6 +1106,81 @@ header {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .homeSection {
+    height: 20rem;
+  }
+  .headerHeadline h1 {
+    font-size: 4rem;
+  }
+  .headerHeadlineContainer h1::after {
+    top: -55px;
+    left: 140px;
+  }
+  .homeImageContainer {
+    display: none;
+  }
+  .aboutSection,
+  .about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .smallContact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .smallContactSection p {
+    padding-left: 0;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  .harperJourneySection {
+    text-align: center;
+  }
+  .imageGallery {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .imageGalleryItem {
+    width: calc(100% - 60px);
+  }
+  .imageGalleryItem:nth-child(2) {
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 }
 
@@ -1307,6 +1436,11 @@ header {
 }
 
 @media (max-width: 660px) {
+  .blogHeaderImage:after {
+    left: 20px;
+    bottom: -40px;
+    font-size: 3.5rem;
+  }
   .asideBlogItem1 img,
   .mainBlogItem1 img {
     display: none;
@@ -1547,8 +1681,9 @@ header {
 
 @media (max-width: 660px) {
   .contactHeaderImage:after {
-    left: 40px;
-    font-size: 4rem;
+    left: 20px;
+    bottom: -40px;
+    font-size: 3.5rem;
   }
 }
 

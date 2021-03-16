@@ -147,6 +147,11 @@
   }
 }
 @media (max-width: 660px) {
+  .blogHeaderImage:after {
+    left: 20px;
+    bottom: -40px;
+    font-size: 3.5rem;
+  }
   .asideBlogItem1 img,
   .mainBlogItem1 img {
     display: none;
