@@ -380,6 +380,18 @@ template {
   letter-spacing: 0.063rem;
 }
 
+@media (max-width: 961px) {
+  .navBar ul {
+    margin: 0 auto;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .navBar ul li:nth-child(3) {
+    display: none;
+  }
+}
+
 footer {
   font-family: "Cabin", sans-serif;
   font-size: 1.25rem;
@@ -504,7 +516,7 @@ textarea {
   position: relative;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1140px) {
   .formShared {
     width: 100%;
   }
@@ -572,7 +584,7 @@ header {
   position: relative;
 }
 
-.headerHeadlineContainer::after {
+.headerHeadlineContainer h1::after {
   content: url(../assets/circle-text.png);
   position: absolute;
   top: -35px;
@@ -882,7 +894,7 @@ header {
   width: calc(100% / 3 - 40px);
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1140px) {
   .homeImageContainer {
     margin-left: 10px;
     margin-top: 30px;
@@ -948,6 +960,52 @@ header {
   }
   .photoBlogSection button {
     margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 961px) {
+  .homeSection {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 25rem;
+  }
+  .headerHeadlineContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 400px;
+    margin: 0;
+  }
+  .headerHeadline {
+    width: 100%;
+    text-align: center;
+  }
+  .headerHeadlineContainer::after {
+    position: absolute;
+    left: 300px;
+  }
+  .homeImageContainer {
+    display: none;
+  }
+  .smallContactSection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .smallContact {
+    width: 100%;
   }
 }
 
@@ -1138,7 +1196,7 @@ header {
   width: 85%;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1140px) {
   .blogSection {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1174,7 +1232,7 @@ header {
     padding-left: 40px;
   }
   .asideBlogItem2 {
-    display: none;
+    margin-bottom: 40px;
   }
   .contactIcons {
     display: -webkit-box;
@@ -1195,6 +1253,10 @@ header {
   .contactText {
     padding: 40px 0;
     width: 80%;
+  }
+  .mainBlog {
+    padding: 0;
+    width: 100%;
   }
 }
 
@@ -1336,7 +1398,7 @@ header {
   position: relative;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1140px) {
   .contactSection,
   .mainContact {
     display: -webkit-box;
