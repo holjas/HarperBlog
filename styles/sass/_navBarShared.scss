@@ -40,12 +40,30 @@
   @include fontStyleHeader($headingFontSize3);
 }
 
+.navBar ul li:first-child {
+  display: none;
+}
+
 @media (max-width: 961px) {
   .navBar ul {
     margin: 0 auto;
     justify-content: space-evenly;
   }
-  .navBar ul li:nth-child(3) {
+  .navBar ul li:nth-child(4) {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navBar ul li {
+    display: none;
+  }
+  .navBar ul li:first-child {
+    display: inline-block;
+    font-size: $headingFontSize3;
+  }
+  .navBar ul {
+    display: flex;
+    text-align: left;
   }
 }
