@@ -142,7 +142,25 @@
     width: 80%;
   }
   .mainBlog {
-    padding: 0;
+    margin: 0;
     width: 100%;
+  }
+}
+@media (max-width: 660px) {
+  .asideBlogItem1 img,
+  .mainBlogItem1 img {
+    display: none;
+  }
+  .mainBlogItem1 {
+    width: 100%;
+  }
+  .mainBlogItemImage {
+    width: 0;
+  }
+  .asideBlogItem1Small {
+    padding: 0;
+  }
+  .asideBlogItem1Small h4 {
+    padding-top: 0;
   }
 }

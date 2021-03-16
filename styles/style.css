@@ -917,49 +917,57 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  .photoBlogflexItem,
-  .photoBlogflexItem2 {
-    width: 100%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .photoBlogSection h3,
+  .photoBlogSectionRowRev h3 {
+    padding: 0;
   }
   .photoBlogflexItem,
   .photoBlogflexItem2 {
     padding: 0;
     margin: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .photoBlogflexItem2 {
+    margin-bottom: 40px;
   }
   .photoBlogimageContainer1,
   .photoBlogimageContainer2 {
+    -webkit-box-shadow: none;
+            box-shadow: none;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .photoBlogSection h3 {
-    padding-top: 60px;
+  .photoBlogflexItem2 h3,
+  .photoBlogflexItem2 p {
+    margin-left: 60px;
+    padding-top: 40px;
   }
-  .photoBlogSection p {
-    padding-bottom: 40px;
-  }
-  .photoBlogSection button {
-    margin-bottom: 40px;
+  .photoBlogflexItem h3,
+  .photoBlogflexItem p {
+    padding-top: 40px;
   }
 }
 
@@ -1009,6 +1017,40 @@ header {
   }
   .imageGalleryItem {
     width: calc(100% / 3 - 15px);
+  }
+}
+
+@media (max-width: 660px) {
+  .harperJourneySection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .smallJourneyImage {
+    display: none;
+  }
+  .smallJourneyText {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
   }
 }
 
@@ -1258,8 +1300,27 @@ header {
     width: 80%;
   }
   .mainBlog {
-    padding: 0;
+    margin: 0;
     width: 100%;
+  }
+}
+
+@media (max-width: 660px) {
+  .asideBlogItem1 img,
+  .mainBlogItem1 img {
+    display: none;
+  }
+  .mainBlogItem1 {
+    width: 100%;
+  }
+  .mainBlogItemImage {
+    width: 0;
+  }
+  .asideBlogItem1Small {
+    padding: 0;
+  }
+  .asideBlogItem1Small h4 {
+    padding-top: 0;
   }
 }
 
@@ -1427,14 +1488,36 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contactIcons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .asideContact h4,
-  .asideContact a {
-    padding: 0 5px 10px 5px;
+  .asideContact h4 {
+    padding-top: 20px;
+  }
+  .asideContact h3 {
+    padding-top: 0;
+  }
+  .asideContact h4:first-child,
+  .asideContact h3:first-child,
+  .asideContact p {
+    padding-left: 40px;
   }
   .mainContact {
     width: 100%;
