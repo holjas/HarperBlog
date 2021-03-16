@@ -62,3 +62,12 @@ a:hover,
 a:focus {
   color: $white;
 }
+
+@media (max-width: 660px) {
+  .wrapper {
+    padding: 100px 20px;
+  }
+  .wrapperSides {
+    padding: 0 20px;
+  }
+}
