@@ -169,11 +169,9 @@ header {
   margin-top: 40px;
   box-shadow: 100px $padding $primary2;
 }
-.photoBlogimageContainer1 img {
-  box-shadow: $padding $padding $primary2;
-}
+.photoBlogimageContainer1 img,
 .photoBlogimageContainer2 img {
-  box-shadow: $padding $padding $primary2;
+  box-shadow: 20px 20px $primary2;
 }
 
 ///////////////////////////////////////////////////
@@ -315,6 +313,12 @@ header {
 }
 
 @media (max-width: 660px) {
+  // photoBlogSection
+  .photoBlogimageContainer1 img,
+  .photoBlogimageContainer2 img {
+    box-shadow: 10px 10px $primary2;
+  }
+  //harperJourney Section
   .harperJourneySection {
     flex-direction: column;
     justify-content: center;

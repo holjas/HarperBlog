@@ -55,6 +55,7 @@
 }
 .asideContact h4:first-child {
   padding-top: $padding;
+  padding-left: 0;
 }
 .asideContact p:last-child {
   padding-bottom: $padding;
@@ -94,31 +95,35 @@
   }
   .asideContact {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  .contactIcons {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
-
-  .asideContact h4 {
-    padding-top: $padding;
+  .contactIcons {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: $padding;
   }
-  .asideContact h3 {
-    padding-top: 0;
+  .contactIcons:first-child,
+  .asideContact h4:first-child {
+    padding: 0;
   }
-  .asideContact h4:first-child,
-  .asideContact h3:first-child,
   .asideContact p {
-    padding-left: $paddingLarge;
+    padding-left: 0;
+    padding-bottom: 5px;
   }
-  // .asideContact h4,
-  // .asideContact a {
-  //   padding: 0 5px 10px 5px;
-  // }
+  .contactText {
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+  //
+  //
   .mainContact {
     width: 100%;
     margin: 0;
@@ -130,5 +135,11 @@
     width: 100%;
     margin: 0;
     padding: 0;
+  }
+}
+@media (max-width: 660px) {
+  .contactHeaderImage:after {
+    left: 40px;
+    font-size: 4rem;
   }
 }

@@ -814,11 +814,7 @@ header {
           box-shadow: 100px 20px #68b0c1;
 }
 
-.photoBlogimageContainer1 img {
-  -webkit-box-shadow: 20px 20px #68b0c1;
-          box-shadow: 20px 20px #68b0c1;
-}
-
+.photoBlogimageContainer1 img,
 .photoBlogimageContainer2 img {
   -webkit-box-shadow: 20px 20px #68b0c1;
           box-shadow: 20px 20px #68b0c1;
@@ -1021,6 +1017,11 @@ header {
 }
 
 @media (max-width: 660px) {
+  .photoBlogimageContainer1 img,
+  .photoBlogimageContainer2 img {
+    -webkit-box-shadow: 10px 10px #68b0c1;
+            box-shadow: 10px 10px #68b0c1;
+  }
   .harperJourneySection {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1419,6 +1420,7 @@ header {
 
 .asideContact h4:first-child {
   padding-top: 20px;
+  padding-left: 0;
 }
 
 .asideContact p:last-child {
@@ -1485,22 +1487,6 @@ header {
   }
   .asideContact {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .contactIcons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1508,16 +1494,42 @@ header {
         -ms-flex-align: center;
             align-items: center;
   }
-  .asideContact h4 {
-    padding-top: 20px;
+  .contactIcons {
+    margin: 0 auto;
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 20px;
   }
-  .asideContact h3 {
-    padding-top: 0;
+  .contactIcons:first-child,
+  .asideContact h4:first-child {
+    padding: 0;
   }
-  .asideContact h4:first-child,
-  .asideContact h3:first-child,
   .asideContact p {
-    padding-left: 40px;
+    padding-left: 0;
+    padding-bottom: 5px;
+  }
+  .contactText {
+    width: 100%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    padding: 0;
   }
   .mainContact {
     width: 100%;
@@ -1530,6 +1542,13 @@ header {
     width: 100%;
     margin: 0;
     padding: 0;
+  }
+}
+
+@media (max-width: 660px) {
+  .contactHeaderImage:after {
+    left: 40px;
+    font-size: 4rem;
   }
 }
 
@@ -1594,4 +1613,13 @@ button:focus,
 a:hover,
 a:focus {
   color: #ffffff;
+}
+
+@media (max-width: 660px) {
+  .wrapper {
+    padding: 100px 20px;
+  }
+  .wrapperSides {
+    padding: 0 20px;
+  }
 }
