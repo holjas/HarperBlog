@@ -21,8 +21,8 @@
 
 **General Styling Notes**
 
-- HTML font size 125%
-- HARPER headline should be 7rem(140px)
+- HTML font size 125% (20px)
+- HARPER headline should be 6rem(120px)
 - Site is needs to be responsive. Mobile should have good UI
 - Flexbox must be used
 - Sass variables need to be used (see below for their assignment)
