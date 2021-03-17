@@ -84,10 +84,7 @@
 // mainBlogComments
 .mainBlogComments,
 .mainBlogComments2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flexColumnCenterItems();
   padding: $paddingLarge;
   background-color: $white;
 }
@@ -104,6 +101,7 @@
 
 .mainBlogItemImage {
   width: 15%;
+  margin-right: 20px;
 }
 .mainBlogItemText {
   width: 85%;
@@ -114,9 +112,7 @@
 //mediaQueries
 @media (max-width: 1140px) {
   .blogSection {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexColumnCenterItems;
   }
   .asideBlog,
   .mainBlog {
@@ -124,9 +120,7 @@
   }
   .asideBlogItem1 {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    @include flexRowCenterItems();
   }
   .asideBlogItem1Small {
     padding-left: $paddingLarge;
@@ -134,17 +128,7 @@
   .asideBlogItem2 {
     margin-bottom: $paddingLarge;
   }
-  .contactIcons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 20%;
-  }
-  .contactText {
-    padding: $paddingLarge 0;
-    width: 80%;
-  }
+
   .mainBlog {
     margin: 0;
     width: 100%;

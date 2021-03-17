@@ -90,10 +90,7 @@
 @media (max-width: 1140px) {
   .contactSection,
   .mainContact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexColumnCenterItems();
     align-content: center;
     margin: 0;
     padding: 0;

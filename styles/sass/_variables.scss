@@ -41,7 +41,15 @@ $paddingLarge: 40px;
   line-height: $lineInput;
 }
 
-///mediaQuery
-// @media (max-width: 660px) {
-//   $headingFontSize1: 3rem;
-// }
+@mixin flexRowCenterItems {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexColumnCenterItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
