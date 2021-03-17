@@ -143,6 +143,11 @@
   .contactHeaderImage:after {
     left: 20px;
     bottom: -40px;
-    font-size: 3.5rem;
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .contactHeaderImage:after {
+    font-size: 2.4rem;
   }
 }
