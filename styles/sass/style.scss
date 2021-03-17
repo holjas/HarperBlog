@@ -4,8 +4,6 @@
 @import "./footerShared";
 @import "./formShared";
 @import "./home";
-//
-//blog styling
 @import "./blog";
 @import "./contact";
 
@@ -26,12 +24,7 @@
 .wrapperSectionWhite {
   background-color: $white;
 }
-.marginLeft {
-  margin-left: 60px;
-}
-.marginRight {
-  margin-right: 60px;
-}
+
 section {
   margin: 0;
   padding: 0;
@@ -62,12 +55,21 @@ a:hover,
 a:focus {
   color: $white;
 }
-
+///////////////////////////////////////
+//mediaQueries
 @media (max-width: 660px) {
   .wrapper {
     padding: 100px 20px;
   }
   .wrapperSides {
     padding: 0 20px;
+  }
+}
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 100px 10px;
+  }
+  .wrapperSides {
+    padding: 0 10px;
   }
 }

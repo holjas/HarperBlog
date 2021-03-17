@@ -1,3 +1,7 @@
+// asideBlog Section
+// mainBlog Section
+// mainBlogComments
+
 .blogHeaderImage {
   width: 100%;
   background-color: $primary3;
@@ -167,5 +171,25 @@
   }
   .asideBlogItem1Small h4 {
     padding-top: 0;
+  }
+}
+@media (max-width: 480px) {
+  .asideBlogItem1,
+  .asideBlogItem2,
+  .mainBlogEntry {
+    border: 20px solid $white;
+  }
+  .asideBlogItem1,
+  .mainBlogEntry,
+  .mainBlogComments,
+  .mainBlogComments2 {
+    text-align: center;
+  }
+  .mainBlogItemText {
+    width: 100%;
+  }
+  .mainBlogComments,
+  .mainBlogComments2 {
+    padding: $padding;
   }
 }

@@ -787,8 +787,8 @@ header {
   padding-bottom: 20px;
 }
 
-.photoBlogflexItem,
-.photoBlogflexItem2 {
+.photoBlogFlexItem,
+.photoBlogFlexItem2 {
   width: calc(50% - 30px);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -799,7 +799,7 @@ header {
           flex-direction: column;
 }
 
-.photoBlogflexItem {
+.photoBlogFlexItem {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -808,13 +808,13 @@ header {
           justify-content: flex-end;
 }
 
-.photoBlogflexItem h3,
-.photoBlogflexItem p,
-.photoBlogflexItem button {
+.photoBlogFlexItem h3,
+.photoBlogFlexItem p,
+.photoBlogFlexItem button {
   margin-left: 60px;
 }
 
-.photoBlogflexItem2 {
+.photoBlogFlexItem2 {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -824,9 +824,9 @@ header {
   text-align: left;
 }
 
-.photoBlogflexItem2 h3,
-.photoBlogflexItem2 p,
-.photoBlogflexItem2 button {
+.photoBlogFlexItem2 h3,
+.photoBlogFlexItem2 p,
+.photoBlogFlexItem2 button {
   margin-right: 60px;
 }
 
@@ -960,8 +960,8 @@ header {
   .photoBlogSectionRowRev h3 {
     padding: 0;
   }
-  .photoBlogflexItem,
-  .photoBlogflexItem2 {
+  .photoBlogFlexItem,
+  .photoBlogFlexItem2 {
     padding: 0;
     margin: 0;
     width: 100%;
@@ -975,7 +975,7 @@ header {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .photoBlogflexItem2 {
+  .photoBlogFlexItem2 {
     margin-bottom: 100px;
   }
   .photoBlogimageContainer1,
@@ -992,24 +992,24 @@ header {
         -ms-flex-align: center;
             align-items: center;
   }
-  .photoBlogflexItem2 h3,
-  .photoBlogflexItem2 p {
+  .photoBlogFlexItem2 h3,
+  .photoBlogFlexItem2 p {
     margin-left: 60px;
     padding-top: 40px;
   }
-  .photoBlogflexItem2 button {
+  .photoBlogFlexItem2 button {
     margin-right: 0;
   }
-  .photoBlogflexItem h3 {
+  .photoBlogFlexItem h3 {
     padding-top: 40px;
     margin-left: 60px;
     margin-right: 60px;
   }
-  .photoBlogflexItem p {
+  .photoBlogFlexItem p {
     margin-left: 60px;
     margin-right: 60px;
   }
-  .photoBlogflexItem button {
+  .photoBlogFlexItem button {
     margin-left: 0;
   }
 }
@@ -1071,8 +1071,8 @@ header {
   }
   .photoBlogSection h3,
   .photoBlogSection p,
-  .photoBlogflexItem2 h3,
-  .photoBlogflexItem2 p {
+  .photoBlogFlexItem2 h3,
+  .photoBlogFlexItem2 p {
     margin: 0;
     text-align: center;
   }
@@ -1112,6 +1112,7 @@ header {
 @media (max-width: 480px) {
   .homeSection {
     height: 20rem;
+    margin-top: -25px;
   }
   .headerHeadline h1 {
     font-size: 4rem;
@@ -1140,6 +1141,9 @@ header {
             align-items: center;
     text-align: center;
   }
+  .aboutSection p {
+    padding-bottom: 40px;
+  }
   .smallContact {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1155,13 +1159,22 @@ header {
         -ms-flex-align: center;
             align-items: center;
   }
+  .smallContactSection h3 {
+    padding-left: 0;
+  }
   .smallContactSection p {
     padding-left: 0;
     padding-bottom: 40px;
     text-align: center;
   }
+  .photoBlogSection p {
+    padding-bottom: 40px;
+  }
   .harperJourneySection {
     text-align: center;
+  }
+  .smallJourneyText p {
+    padding-bottom: 40px;
   }
   .imageGallery {
     -webkit-box-orient: vertical;
@@ -1459,6 +1472,27 @@ header {
   }
 }
 
+@media (max-width: 480px) {
+  .asideBlogItem1,
+  .asideBlogItem2,
+  .mainBlogEntry {
+    border: 20px solid #ffffff;
+  }
+  .asideBlogItem1,
+  .mainBlogEntry,
+  .mainBlogComments,
+  .mainBlogComments2 {
+    text-align: center;
+  }
+  .mainBlogItemText {
+    width: 100%;
+  }
+  .mainBlogComments,
+  .mainBlogComments2 {
+    padding: 20px;
+  }
+}
+
 .contactHeaderImage {
   width: 100%;
   background-color: #b9dde7;
@@ -1707,14 +1741,6 @@ header {
   background-color: #ffffff;
 }
 
-.marginLeft {
-  margin-left: 60px;
-}
-
-.marginRight {
-  margin-right: 60px;
-}
-
 section {
   margin: 0;
   padding: 0;
@@ -1756,5 +1782,14 @@ a:focus {
   }
   .wrapperSides {
     padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 100px 10px;
+  }
+  .wrapperSides {
+    padding: 0 10px;
   }
 }
