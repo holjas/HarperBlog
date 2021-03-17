@@ -138,7 +138,7 @@
   .blogHeaderImage:after {
     left: 20px;
     bottom: -40px;
-    font-size: 3.5rem;
+    font-size: 2.8rem;
   }
   .asideBlogItem1 img,
   .mainBlogItem1 img {
@@ -158,6 +158,10 @@
   }
 }
 @media (max-width: 480px) {
+  .blogHeaderImage:after {
+    font-size: 2.4rem;
+  }
+
   .asideBlogItem1,
   .asideBlogItem2,
   .mainBlogEntry {
