@@ -374,7 +374,8 @@ header {
     margin-top: -25px;
   }
   .headerHeadline h1 {
-    font-size: 4rem;
+    font-size: 3.8rem;
+    margin-left: -20px;
   }
   .headerHeadlineContainer h1::after {
     top: -55px;
@@ -433,5 +434,20 @@ header {
   .imageGalleryItem:nth-child(2) {
     margin-top: 40px;
     margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 340px) {
+  //homeSection
+  .homeSection {
+    margin-top: -30px;
+  }
+  .headerHeadline h1 {
+    font-size: 3.5rem;
+    margin-left: -25px;
+  }
+  .headerHeadlineContainer h1::after {
+    top: -55px;
+    left: 85px;
   }
 }
