@@ -1,11 +1,12 @@
 html {
+  font-size: 20px;
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
   margin: 0;
-  font-size: 125%;
+  // font-size: 125%;
 }
 article,
 aside,
@@ -15,10 +16,10 @@ nav,
 section {
   display: block;
 }
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
+// h1 {
+//   font-size: 2em;
+//   margin: 0.67em 0;
+// }
 figcaption,
 figure,
 main {
@@ -127,6 +128,7 @@ select {
   text-transform: none;
   padding: 0;
   margin: 0;
+  font-size: 125%;
 }
 button,
 html [type="button"],

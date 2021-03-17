@@ -15,7 +15,7 @@ header {
 .homeSection {
   display: flex;
   flex-direction: row;
-  height: 34rem;
+  height: 28rem;
 }
 .homeImageContainer {
   margin-left: 50px;
@@ -26,7 +26,7 @@ header {
   box-shadow: 15px 15px $white;
 }
 .headerHeadline h1 {
-  @include fontStyleHeader(7rem);
+  @include fontStyleHeader(6rem);
 }
 .headerHeadlineContainer {
   width: 65%;
@@ -38,7 +38,7 @@ header {
   content: url(../assets/circle-text.png);
   position: absolute;
   top: -35px;
-  left: 260px;
+  left: 280px;
 }
 .headerHeadline {
   display: inline-block;
@@ -316,6 +316,9 @@ header {
     width: 100%;
     text-align: center;
   }
+  .headerHeadline h1 {
+    font-size: 6rem;
+  }
   .headerHeadlineContainer::after {
     position: absolute;
     left: 300px;
@@ -373,12 +376,12 @@ header {
     margin-top: -25px;
   }
   .headerHeadline h1 {
-    font-size: 3.8rem;
+    font-size: 3.7rem;
     margin-left: -20px;
   }
   .headerHeadlineContainer h1::after {
     top: -55px;
-    left: 140px;
+    left: 175px;
   }
   .homeImageContainer {
     display: none;
@@ -428,18 +431,27 @@ header {
     margin-bottom: 40px;
   }
 }
-
+@media (max-width: 375px) {
+  .headerHeadline h1 {
+    font-size: 3.2rem;
+    margin-left: -25px;
+  }
+  .headerHeadlineContainer h1::after {
+    top: -55px;
+    left: 120px;
+  }
+}
 @media (max-width: 340px) {
   //homeSection
   .homeSection {
     margin-top: -30px;
   }
   .headerHeadline h1 {
-    font-size: 3.5rem;
+    font-size: 3.1rem;
     margin-left: -25px;
   }
   .headerHeadlineContainer h1::after {
     top: -55px;
-    left: 85px;
+    left: 90px;
   }
 }
