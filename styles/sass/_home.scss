@@ -330,6 +330,10 @@ header {
   .smallContact {
     width: 100%;
   }
+  //harperJourney
+  .smallJourneyImage img {
+    box-shadow: 10px 10px $primary1;
+  }
   //imageGallery Section
   .imageGalleryItem {
     width: calc(100% / 3 - 15px);
@@ -351,18 +355,13 @@ header {
   }
   //harperJourney Section
   .harperJourneySection {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexColumnCenterItems();
   }
   .smallJourneyImage {
     display: none;
   }
   .smallJourneyText {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexColumnCenterItems();
     width: 100%;
   }
 }
@@ -387,10 +386,7 @@ header {
   //aboutSection
   .aboutSection,
   .about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexColumnCenterItems();
     text-align: center;
   }
   .aboutSection p {
@@ -399,9 +395,7 @@ header {
   //smallContact Section
   .smallContact {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexColumnCenterItems();
   }
   .smallContactSection h3 {
     padding-left: 0;
@@ -424,9 +418,7 @@ header {
   }
   //imageGallery
   .imageGallery {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexColumnCenterItems();
   }
   .imageGalleryItem {
     width: calc(100% - 60px);

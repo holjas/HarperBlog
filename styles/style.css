@@ -543,6 +543,9 @@ textarea {
   }
   form {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1059,6 +1062,10 @@ header {
   .smallContact {
     width: 100%;
   }
+  .smallJourneyImage img {
+    -webkit-box-shadow: 10px 10px #227284;
+            box-shadow: 10px 10px #227284;
+  }
   .imageGalleryItem {
     width: calc(100% / 3 - 15px);
   }
@@ -1078,6 +1085,9 @@ header {
     text-align: center;
   }
   .harperJourneySection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1150,6 +1160,7 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1179,6 +1190,9 @@ header {
     padding-bottom: 40px;
   }
   .imageGallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1394,6 +1408,7 @@ header {
 
 .mainBlogItemImage {
   width: 15%;
+  margin-right: 20px;
 }
 
 .mainBlogItemText {
@@ -1402,6 +1417,9 @@ header {
 
 @media (max-width: 1140px) {
   .blogSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1421,6 +1439,7 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1437,26 +1456,6 @@ header {
   }
   .asideBlogItem2 {
     margin-bottom: 40px;
-  }
-  .contactIcons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 20%;
-  }
-  .contactText {
-    padding: 40px 0;
-    width: 80%;
   }
   .mainBlog {
     margin: 0;
