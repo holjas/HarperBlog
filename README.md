@@ -1,5 +1,7 @@
 ## Project One Style Guide for "Harper Blog" design
 
+:rainbow: :sparkles: :two_hearts:
+
 **Naming Conventions**
 
 - ID names, Class names, file names, variable names should be in lowerCamelCase

@@ -142,29 +142,29 @@ header {
   @include fontStyleMain(32px, 0px);
   padding-bottom: $padding;
 }
-.photoBlogflexItem,
-.photoBlogflexItem2 {
+.photoBlogFlexItem,
+.photoBlogFlexItem2 {
   width: calc(50% - 30px);
   display: flex;
   flex-direction: column;
 }
-.photoBlogflexItem {
+.photoBlogFlexItem {
   align-items: flex-start;
   justify-content: flex-end;
 }
-.photoBlogflexItem h3,
-.photoBlogflexItem p,
-.photoBlogflexItem button {
+.photoBlogFlexItem h3,
+.photoBlogFlexItem p,
+.photoBlogFlexItem button {
   margin-left: 60px;
 }
-.photoBlogflexItem2 {
+.photoBlogFlexItem2 {
   align-items: flex-end;
   justify-content: flex-end;
   text-align: left;
 }
-.photoBlogflexItem2 h3,
-.photoBlogflexItem2 p,
-.photoBlogflexItem2 button {
+.photoBlogFlexItem2 h3,
+.photoBlogFlexItem2 p,
+.photoBlogFlexItem2 button {
   margin-right: 60px;
 }
 .photoBlogimageContainer1 {
@@ -257,8 +257,8 @@ header {
   .photoBlogSectionRowRev h3 {
     padding: 0;
   }
-  .photoBlogflexItem,
-  .photoBlogflexItem2 {
+  .photoBlogFlexItem,
+  .photoBlogFlexItem2 {
     padding: 0;
     margin: 0;
     width: 100%;
@@ -266,7 +266,7 @@ header {
     align-items: center;
     justify-content: center;
   }
-  .photoBlogflexItem2 {
+  .photoBlogFlexItem2 {
     margin-bottom: 100px;
   }
   .photoBlogimageContainer1,
@@ -276,24 +276,24 @@ header {
     justify-content: center;
     align-items: center;
   }
-  .photoBlogflexItem2 h3,
-  .photoBlogflexItem2 p {
+  .photoBlogFlexItem2 h3,
+  .photoBlogFlexItem2 p {
     margin-left: 60px;
     padding-top: $paddingLarge;
   }
-  .photoBlogflexItem2 button {
+  .photoBlogFlexItem2 button {
     margin-right: 0;
   }
-  .photoBlogflexItem h3 {
+  .photoBlogFlexItem h3 {
     padding-top: $paddingLarge;
     margin-left: 60px;
     margin-right: 60px;
   }
-  .photoBlogflexItem p {
+  .photoBlogFlexItem p {
     margin-left: 60px;
     margin-right: 60px;
   }
-  .photoBlogflexItem button {
+  .photoBlogFlexItem button {
     margin-left: 0;
   }
 }
@@ -344,8 +344,8 @@ header {
   }
   .photoBlogSection h3,
   .photoBlogSection p,
-  .photoBlogflexItem2 h3,
-  .photoBlogflexItem2 p {
+  .photoBlogFlexItem2 h3,
+  .photoBlogFlexItem2 p {
     margin: 0;
     text-align: center;
   }
@@ -371,6 +371,7 @@ header {
   //homeSection
   .homeSection {
     height: 20rem;
+    margin-top: -25px;
   }
   .headerHeadline h1 {
     font-size: 4rem;
@@ -391,6 +392,9 @@ header {
     align-items: center;
     text-align: center;
   }
+  .aboutSection p {
+    padding-bottom: $paddingLarge;
+  }
   //smallContact Section
   .smallContact {
     display: flex;
@@ -398,16 +402,25 @@ header {
     justify-content: center;
     align-items: center;
   }
+  .smallContactSection h3 {
+    padding-left: 0;
+  }
   .smallContactSection p {
     padding-left: 0;
     padding-bottom: $paddingLarge;
     text-align: center;
   }
+  //photoBlog Section
+  .photoBlogSection p {
+    padding-bottom: $paddingLarge;
+  }
   //harperJourney
   .harperJourneySection {
     text-align: center;
   }
-
+  .smallJourneyText p {
+    padding-bottom: $paddingLarge;
+  }
   //imageGallery
   .imageGallery {
     flex-direction: column;

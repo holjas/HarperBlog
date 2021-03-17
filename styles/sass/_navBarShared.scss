@@ -1,3 +1,5 @@
+// navBar
+
 .navBar {
   display: flex;
   flex-direction: row;
@@ -39,11 +41,11 @@
 .navLogo {
   @include fontStyleHeader($headingFontSize3);
 }
-
 .navBar ul li:first-child {
   display: none;
 }
-
+//////////////////////////////////////
+//mediaQueries
 @media (max-width: 961px) {
   .navBar ul {
     margin: 0 auto;
