@@ -1071,6 +1071,13 @@ header {
 }
 
 @media (max-width: 660px) {
+  .headerHeadline h1 {
+    margin-left: -30px;
+    font-size: 5.3rem;
+  }
+  .headerHeadlineContainer h1::after {
+    left: 240px;
+  }
   .photoBlogimageContainer1 img,
   .photoBlogimageContainer2 img {
     -webkit-box-shadow: 10px 10px #68b0c1;
@@ -1583,10 +1590,18 @@ header {
 .asideContact a,
 .asideContact i {
   color: #227284;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.contactText a:first-child {
+  color: #171717;
 }
 
 .asideContact a:hover,
-.asideContact a:focus {
+.asideContact a:focus,
+.asideContact i:hover,
+.asideContact i:focus {
   color: #68b0c1;
 }
 

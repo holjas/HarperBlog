@@ -41,9 +41,15 @@
 .asideContact a,
 .asideContact i {
   color: $primary1;
+  transition: 0.3s;
+}
+.contactText a:first-child {
+  color: $black;
 }
 .asideContact a:hover,
-.asideContact a:focus {
+.asideContact a:focus,
+.asideContact i:hover,
+.asideContact i:focus {
   color: $primary2;
 }
 .contactIcons:first-child {

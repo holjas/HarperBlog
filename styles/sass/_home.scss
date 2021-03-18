@@ -344,6 +344,14 @@ header {
 }
 
 @media (max-width: 660px) {
+  //homesection
+  .headerHeadline h1 {
+    margin-left: -30px;
+    font-size: 5.3rem;
+  }
+  .headerHeadlineContainer h1::after {
+    left: 240px;
+  }
   // photoBlogSection
   .photoBlogimageContainer1 img,
   .photoBlogimageContainer2 img {
