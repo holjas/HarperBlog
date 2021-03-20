@@ -1,6 +1,11 @@
+## Assignment Two Features
+
+:two_hearts:
+**Making Project 1 Interactive with JavaScript**
+
 ## Project One Style Guide for "Harper Blog" design
 
-:rainbow: :sparkles: :two_hearts:
+:rainbow: :sparkles:
 
 **Naming Conventions**
 
