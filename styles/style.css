@@ -450,7 +450,7 @@ form {
 
 input[type="text"],
 input[type="email"] {
-  padding: 20px;
+  padding: 15px;
   height: 60px;
   width: calc(50% - 10px);
   margin-bottom: 20px;
@@ -1790,10 +1790,17 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  visibility: hidden;
+  z-index: -1;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .modalContainer {
-  background: lightgreen;
+  background: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1805,12 +1812,90 @@ header {
       -ms-flex-align: center;
           align-items: center;
   width: 90vw;
-  height: 30vh;
+  height: 45vh;
+  -webkit-animation: showModalAnimation 0.2s;
+          animation: showModalAnimation 0.2s;
+  position: relative;
+}
+
+.closeModelBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px 40px;
+  font-size: 1.6rem;
+  background-color: transparent;
+}
+
+.closeModelBtn:hover,
+.closeModelBtn:focus {
+  color: #f38d8d;
 }
 
 .modalVisible {
   visibility: visible;
   z-index: 5;
+}
+
+.modalImage {
+  width: 35%;
+}
+
+.modalImage img {
+  -webkit-box-shadow: 10px 10px #227284;
+          box-shadow: 10px 10px #227284;
+}
+
+.modalText {
+  width: 65%;
+}
+
+.modalText h3 {
+  display: inline-block;
+  font-family: "Oswald", sans-serif;
+  font-size: 2.1rem;
+  color: #171717;
+  text-transform: uppercase;
+  line-height: 150%;
+  letter-spacing: 1px;
+  padding-bottom: 20px;
+}
+
+.modalText p {
+  font-family: "Cabin", sans-serif;
+  font-size: 1rem;
+  color: #171717;
+  letter-spacing: 0px;
+  line-height: 32px;
+  padding-bottom: 20px;
+}
+
+.modalImageContainer {
+  margin-right: 60px;
+}
+
+@-webkit-keyframes showModalAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showModalAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .wrapper {
