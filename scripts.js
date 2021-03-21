@@ -11,7 +11,10 @@ const showModal = window.setTimeout(() => {
 closeModelBtn.addEventListener("click", function () {
   modalOverlay.classList.remove("modalVisible");
 });
-//close modal if user clicks outside of the modal when it's open
-body.addEventListener("click", function () {
-  console.log("clicked outside the modal");
+//close modal if it's open and user clicks outside the modal
+body.addEventListener("click", function (e) {
+  const targetClassList = e.target.classList;
+  if (targetClassList[0] === "modalOverlay") {
+    modalOverlay.classList.remove("modalVisible");
+  }
 });

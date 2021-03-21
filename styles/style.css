@@ -1792,8 +1792,6 @@ header {
           align-items: center;
   visibility: hidden;
   z-index: -1;
-  -webkit-transition: all 1s;
-  transition: all 1s;
 }
 
 .modalContainer {
@@ -1895,6 +1893,18 @@ header {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 660px) {
+  .modalImage {
+    display: none;
+  }
+  .modalText {
+    width: 100%;
+  }
+  .modalContainer {
+    height: 70vh;
   }
 }
 

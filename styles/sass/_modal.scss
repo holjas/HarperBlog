@@ -11,7 +11,6 @@
   align-items: center;
   visibility: hidden;
   z-index: -1;
-  transition: all 1s;
 }
 .modalContainer {
   background: $primary4;
@@ -70,5 +69,17 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 660px) {
+  .modalImage {
+    display: none;
+  }
+  .modalText {
+    width: 100%;
+  }
+  .modalContainer {
+    height: 70vh;
   }
 }
