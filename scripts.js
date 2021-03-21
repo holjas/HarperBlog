@@ -1,11 +1,14 @@
 const modalOverlay = document.querySelector(".modalOverlay");
 const closeModelBtn = document.querySelector(".closeModelBtn");
 const body = document.querySelector("body");
+const prevBtn = document.querySelector(".prevBtn");
+const nextBtn = document.querySelector(".nextBtn");
 
+//modalOverlay start
 //show modal after a short delay
 const showModal = window.setTimeout(() => {
   modalOverlay.classList.add("modalVisible");
-}, 0.2);
+}, 4000);
 
 //close modal when 'x' button clicked
 closeModelBtn.addEventListener("click", function () {
@@ -18,3 +21,6 @@ body.addEventListener("click", function (e) {
     modalOverlay.classList.remove("modalVisible");
   }
 });
+//modalOverlay end
+///////////////////////////////////////////////
+//photoGallery scroll start
