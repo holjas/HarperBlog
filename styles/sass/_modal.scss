@@ -9,22 +9,66 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  //   transition: var(--transition);
-  //   visibility: hidden;
-  //   z-index: -1;
+  visibility: hidden;
+  z-index: -1;
+  transition: all 1s;
 }
 .modalContainer {
-  background: lightgreen;
+  background: $primary4;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 90vw;
-  height: 30vh;
+  height: 45vh;
+  animation: showModalAnimation 0.2s;
+  position: relative;
+}
+.closeModelBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px 40px;
+  font-size: $headingFontSize3;
+  background-color: transparent;
+}
+.closeModelBtn:hover,
+.closeModelBtn:focus {
+  color: $accent;
 }
 .modalVisible {
   visibility: visible;
   z-index: 5;
 }
-// .headerHeadline {
-//   visibility: hidden;
-// }
+.modalImage {
+  width: 35%;
+}
+.modalImage img {
+  box-shadow: 10px 10px $primary1;
+}
+.modalText {
+  width: 65%;
+}
+.modalText h3 {
+  display: inline-block;
+  @include fontStyleHeader($headingFontSize2);
+  padding-bottom: $padding;
+}
+.modalText p {
+  @include fontStyleMain(32px, 0px);
+  padding-bottom: $padding;
+}
+.modalImageContainer {
+  margin-right: 60px;
+}
+@keyframes showModalAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

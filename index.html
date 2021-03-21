@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HOME -HollyJasiuraProjectOne</title>
+    <link rel="shortcut icon" href="#" />
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="./styles/style.css" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -35,15 +37,6 @@
         </nav>
         <!-- Top Navigation End -->
 
-        <!-- modalSection Start -->
-        <div class="modalOverlay">
-          <div class="modalContainer">
-            <h3>modal content!</h3>
-            <button><i class="fas fa-times"></i></button>
-          </div>
-        </div>
-        <!-- modalSection end -->
-
         <!-- homeSection Start -->
         <div class="homeSection">
           <div class="homeImageContainer">
@@ -63,6 +56,55 @@
     </header>
 
     <main>
+      <!-- modalSection Start -->
+      <div class="modalOverlay">
+        <div class="wrapper modalContainer">
+          <button class="closeModelBtn"><i class="fas fa-times"></i></button>
+          <div class="modalImage">
+            <div class="modalImageContainer">
+              <img src="./assets/home-image-5.jpg" alt="" />
+            </div>
+          </div>
+          <div class="modalText">
+            <h3>let's connect!</h3>
+            <p>
+              Sweet roll bonbon bonbon cake cotton candy pudding dragée pastry.
+              Bonbon apple pie dragée marshmallow sesame snaps chocolate.
+              Jujubes toffee candy canes soufflé oat cake chocolate bar cake.
+            </p>
+            <div class="formShared">
+              <form
+                action=""
+                method="POST"
+                class="blogCommentForm"
+                name="blogCommentForm"
+              >
+                <legend>leave you comment</legend>
+                <label for="userName">your name</label>
+                <input
+                  type="text"
+                  id="userName"
+                  name="userName"
+                  placeholder="Name"
+                  class="formItem"
+                />
+                <label for="userEmail">your email</label>
+                <input
+                  type="email"
+                  id="userEmail"
+                  name="userEmail"
+                  placeholder="Email address"
+                  class="formItem"
+                />
+
+                <button type="submit" class="btnLarge">subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modalSection end -->
+
       <!-- aboutSection  start -->
       <section class="wrapperSectionPrimary" id="aboutHarper">
         <div class="wrapper aboutSection">
