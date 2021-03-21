@@ -907,7 +907,22 @@ header {
   padding-bottom: 20px;
 }
 
-.imageGallery {
+.imageGallerySection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.imageGalleryContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -918,12 +933,48 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .imageGalleryItem {
   width: calc(100% / 3 - 40px);
+}
+
+.imageGalleryBtnContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 20px auto;
+}
+
+.imageGalleryBtnContainer i,
+.imageGalleryBtnContainer button {
+  font-size: 2.1rem;
+  background-color: transparent;
+  padding: 0;
+}
+
+.imageGalleryBtnContainer i:hover,
+.imageGalleryBtnContainer button:hover,
+.imageGalleryBtnContainer i:focus,
+.imageGalleryBtnContainer button:focus {
+  color: #f38d8d;
 }
 
 @media (max-width: 1140px) {
@@ -1811,8 +1862,6 @@ header {
           align-items: center;
   width: 90vw;
   height: 45vh;
-  -webkit-animation: showModalAnimation 0.2s;
-          animation: showModalAnimation 0.2s;
   position: relative;
 }
 
@@ -1833,6 +1882,8 @@ header {
 .modalVisible {
   visibility: visible;
   z-index: 5;
+  -webkit-animation: showModalAnimation 0.5s;
+          animation: showModalAnimation 0.5s;
 }
 
 .modalImage {
@@ -1876,9 +1927,6 @@ header {
   0% {
     opacity: 0;
   }
-  50% {
-    opacity: 0.5;
-  }
   100% {
     opacity: 1;
   }
@@ -1888,15 +1936,12 @@ header {
   0% {
     opacity: 0;
   }
-  50% {
-    opacity: 0.5;
-  }
   100% {
     opacity: 1;
   }
 }
 
-@media (max-width: 660px) {
+@media (max-width: 960px) {
   .modalImage {
     display: none;
   }
@@ -1904,7 +1949,7 @@ header {
     width: 100%;
   }
   .modalContainer {
-    height: 70vh;
+    height: 60vh;
   }
 }
 

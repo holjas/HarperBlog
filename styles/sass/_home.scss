@@ -217,14 +217,38 @@ header {
 
 ///////////////////////////////////////////////////
 //imageGallery Section
-.imageGallery {
+.imageGallerySection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.imageGalleryContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
 }
 .imageGalleryItem {
   width: calc(100% / 3 - 40px);
+}
+.imageGalleryBtnContainer {
+  @include flexRowCenterItems;
+  width: 60%;
+  justify-content: space-evenly;
+  margin: 20px auto;
+}
+.imageGalleryBtnContainer i,
+.imageGalleryBtnContainer button {
+  font-size: $headingFontSize2;
+  background-color: transparent;
+  padding: 0;
+}
+.imageGalleryBtnContainer i:hover,
+.imageGalleryBtnContainer button:hover,
+.imageGalleryBtnContainer i:focus,
+.imageGalleryBtnContainer button:focus {
+  color: $accent;
 }
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////

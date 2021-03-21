@@ -20,7 +20,6 @@
   align-items: center;
   width: 90vw;
   height: 45vh;
-  animation: showModalAnimation 0.2s;
   position: relative;
 }
 .closeModelBtn {
@@ -38,6 +37,7 @@
 .modalVisible {
   visibility: visible;
   z-index: 5;
+  animation: showModalAnimation 0.5s;
 }
 .modalImage {
   width: 35%;
@@ -64,15 +64,15 @@
   0% {
     opacity: 0;
   }
-  50% {
-    opacity: 0.5;
-  }
+  // 50% {
+  //   opacity: 0.5;
+  // }
   100% {
     opacity: 1;
   }
 }
 
-@media (max-width: 660px) {
+@media (max-width: 960px) {
   .modalImage {
     display: none;
   }
@@ -80,6 +80,6 @@
     width: 100%;
   }
   .modalContainer {
-    height: 70vh;
+    height: 60vh;
   }
 }
