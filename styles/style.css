@@ -940,6 +940,11 @@ header {
 
 .imageGalleryItem {
   width: calc(100% / 3 - 40px);
+  display: block;
+}
+
+.imageGalleryItemHidden {
+  display: none;
 }
 
 .imageGalleryBtnContainer {

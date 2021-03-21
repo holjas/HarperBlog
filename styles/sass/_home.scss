@@ -231,7 +231,12 @@ header {
 }
 .imageGalleryItem {
   width: calc(100% / 3 - 40px);
+  display: block;
 }
+.imageGalleryItemHidden {
+  display: none;
+}
+//image scroll function
 .imageGalleryBtnContainer {
   @include flexRowCenterItems;
   width: 60%;
@@ -250,6 +255,7 @@ header {
 .imageGalleryBtnContainer button:focus {
   color: $accent;
 }
+
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
 //mediaQueries
