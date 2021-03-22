@@ -4,9 +4,9 @@ const closeModelBtn = document.querySelector(".closeModelBtn");
 const body = document.querySelector("body");
 
 //show modal after a short delay
-// const showModal = window.setTimeout(() => {
-//   modalOverlay.classList.add("modalVisible");
-// }, 4000);
+const showModal = window.setTimeout(() => {
+  modalOverlay.classList.add("modalVisible");
+}, 4000);
 
 //close modal when 'x' button clicked
 closeModelBtn.addEventListener("click", function () {
@@ -21,11 +21,9 @@ body.addEventListener("click", function (e) {
 });
 //modalOverlay end
 ///////////////////////////////////////////////
-//hamburgerToggle
+//hamburgerToggle on mobile
 const navToggle = document.querySelector(".navToggle");
 const navSelection = document.querySelector(".navSelection");
-const navBar = document.querySelector(".navBar");
-const navUl = document.querySelector(".navBar>ul li");
 
 navToggle.addEventListener("click", function () {
   navSelection.classList.toggle("navSelectionToggle");
