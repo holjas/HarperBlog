@@ -4,7 +4,7 @@
 **Making Project 1 Interactive with JavaScript**
 
 - modalOverlay will appear 4seconds after arriving to site
--
+- toggle hambuger menu on mobile screens
 
 ## Project One Style Guide for "Harper Blog" design
 
