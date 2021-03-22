@@ -233,28 +233,6 @@ header {
   width: calc(100% / 3 - 40px);
   display: block;
 }
-.imageGalleryItemHidden {
-  display: none;
-}
-//image scroll function
-.imageGalleryBtnContainer {
-  @include flexRowCenterItems;
-  width: 60%;
-  justify-content: space-evenly;
-  margin: 20px auto;
-}
-.imageGalleryBtnContainer i,
-.imageGalleryBtnContainer button {
-  font-size: $headingFontSize2;
-  background-color: transparent;
-  padding: 0;
-}
-.imageGalleryBtnContainer i:hover,
-.imageGalleryBtnContainer button:hover,
-.imageGalleryBtnContainer i:focus,
-.imageGalleryBtnContainer button:focus {
-  color: $accent;
-}
 
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
