@@ -159,7 +159,7 @@ header {
 }
 .photoBlogFlexItem2 {
   align-items: flex-end;
-  justify-content: flex-start;
+  justify-content: flex-end;
   text-align: left;
 }
 .photoBlogFlexItem2 h3,
@@ -217,23 +217,15 @@ header {
 
 ///////////////////////////////////////////////////
 //imageGallery Section
-.imageGallerySection {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-}
-.imageGalleryContainer {
+.imageGallery {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-content: center;
 }
 .imageGalleryItem {
   width: calc(100% / 3 - 40px);
-  display: block;
 }
-
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
 //mediaQueries
@@ -409,7 +401,8 @@ header {
     text-align: center;
   }
   .aboutSection p {
-    padding-bottom: $paddingLarge;
+    margin-bottom: $paddingLarge;
+    color: red;
   }
   //smallContact Section
   .smallContact {
