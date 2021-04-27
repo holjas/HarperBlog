@@ -853,9 +853,9 @@ header {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   text-align: left;
 }
 
@@ -942,22 +942,7 @@ header {
   padding-bottom: 20px;
 }
 
-.imageGallerySection {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-
-.imageGalleryContainer {
+.imageGallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -968,14 +953,12 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .imageGalleryItem {
   width: calc(100% / 3 - 40px);
-  display: block;
 }
 
 @media (max-width: 1140px) {
@@ -1212,7 +1195,8 @@ header {
     text-align: center;
   }
   .aboutSection p {
-    padding-bottom: 40px;
+    margin-bottom: 40px;
+    color: red;
   }
   .smallContact {
     display: -webkit-box;
