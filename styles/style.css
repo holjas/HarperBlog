@@ -845,7 +845,7 @@ header {
 
 .photoBlogFlexItem h3,
 .photoBlogFlexItem p,
-.photoBlogFlexItem button {
+.photoBlogFlexItem .btn {
   margin-left: 60px;
 }
 
@@ -861,7 +861,7 @@ header {
 
 .photoBlogFlexItem2 h3,
 .photoBlogFlexItem2 p,
-.photoBlogFlexItem2 button {
+.photoBlogFlexItem2 .btn {
   margin-right: 60px;
 }
 
@@ -959,6 +959,7 @@ header {
 
 .imageGalleryItem {
   width: calc(100% / 3 - 40px);
+  padding: 20px;
 }
 
 @media (max-width: 1140px) {
@@ -1280,19 +1281,6 @@ header {
   }
 }
 
-.blogHeaderImage {
-  width: 100%;
-  background-color: #b9dde7;
-  position: relative;
-}
-
-.blogHeaderImage img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 .blogHeaderImage:after {
   content: "blog";
   font-family: "Oswald", sans-serif;
@@ -1304,22 +1292,6 @@ header {
   position: absolute;
   left: calc(5% + 20px);
   bottom: -50px;
-}
-
-.blogSection {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
 
 .asideBlog {
@@ -1564,19 +1536,6 @@ header {
   }
 }
 
-.contactHeaderImage {
-  width: 100%;
-  background-color: #b9dde7;
-  position: relative;
-}
-
-.contactHeaderImage img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 .contactHeaderImage:after {
   content: "contact me";
   font-family: "Oswald", sans-serif;
@@ -1588,22 +1547,6 @@ header {
   position: absolute;
   left: calc(5% + 20px);
   bottom: -50px;
-}
-
-.contactSection {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
 
 .asideContact {
@@ -1958,6 +1901,22 @@ header {
   background-color: #ffffff;
 }
 
+.displayFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 section {
   margin: 0;
   padding: 0;
@@ -1973,6 +1932,10 @@ button {
   padding: 20px 50px;
   background-color: #f38d8d;
   border: transparent;
+}
+
+.btn {
+  width: 200px;
 }
 
 .btn a,
@@ -1991,6 +1954,38 @@ button:focus,
 a:hover,
 a:focus {
   color: #ffffff;
+}
+
+.blogHeaderImage,
+.contactHeaderImage {
+  width: 100%;
+  background-color: #b9dde7;
+  position: relative;
+}
+
+.blogHeaderImage img,
+.contactHeaderImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.blogSection,
+.contactSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 @media (max-width: 660px) {
