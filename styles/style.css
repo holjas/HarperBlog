@@ -376,7 +376,7 @@ template {
   letter-spacing: 1px;
 }
 
-.navBar ul li:first-child {
+.navToggle {
   display: none;
 }
 
@@ -387,25 +387,60 @@ template {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  .navBar ul li:nth-child(4) {
+  .navBar ul li:nth-child(3) {
     display: none;
   }
 }
 
 @media (max-width: 480px) {
-  .navBar ul li {
-    display: none;
+  header {
+    z-index: 10;
   }
-  .navBar ul li:first-child {
+  .navToggle {
     display: inline-block;
     font-size: 1.6rem;
+    padding-left: 20px;
   }
-  .navBar ul {
+  .navBar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    text-align: left;
-    margin-left: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .navSelection {
+    background-color: #b9dde7;
+    width: 80%;
+    visibility: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    z-index: 100;
+  }
+  .navSelectionToggle {
+    visibility: visible;
+  }
+  .navSelectionItem {
+    padding-bottom: 40px;
+    width: 90%;
   }
 }
 
@@ -450,7 +485,7 @@ form {
 
 input[type="text"],
 input[type="email"] {
-  padding: 20px;
+  padding: 15px;
   height: 60px;
   width: calc(50% - 10px);
   margin-bottom: 20px;
@@ -810,7 +845,7 @@ header {
 
 .photoBlogFlexItem h3,
 .photoBlogFlexItem p,
-.photoBlogFlexItem button {
+.photoBlogFlexItem .btn {
   margin-left: 60px;
 }
 
@@ -826,7 +861,7 @@ header {
 
 .photoBlogFlexItem2 h3,
 .photoBlogFlexItem2 p,
-.photoBlogFlexItem2 button {
+.photoBlogFlexItem2 .btn {
   margin-right: 60px;
 }
 
@@ -924,6 +959,7 @@ header {
 
 .imageGalleryItem {
   width: calc(100% / 3 - 40px);
+  padding: 20px;
 }
 
 @media (max-width: 1140px) {
@@ -1160,7 +1196,8 @@ header {
     text-align: center;
   }
   .aboutSection p {
-    padding-bottom: 40px;
+    margin-bottom: 40px;
+    color: red;
   }
   .smallContact {
     display: -webkit-box;
@@ -1244,19 +1281,6 @@ header {
   }
 }
 
-.blogHeaderImage {
-  width: 100%;
-  background-color: #b9dde7;
-  position: relative;
-}
-
-.blogHeaderImage img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 .blogHeaderImage:after {
   content: "blog";
   font-family: "Oswald", sans-serif;
@@ -1268,22 +1292,6 @@ header {
   position: absolute;
   left: calc(5% + 20px);
   bottom: -50px;
-}
-
-.blogSection {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
 
 .asideBlog {
@@ -1528,19 +1536,6 @@ header {
   }
 }
 
-.contactHeaderImage {
-  width: 100%;
-  background-color: #b9dde7;
-  position: relative;
-}
-
-.contactHeaderImage img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 .contactHeaderImage:after {
   content: "contact me";
   font-family: "Oswald", sans-serif;
@@ -1552,22 +1547,6 @@ header {
   position: absolute;
   left: calc(5% + 20px);
   bottom: -50px;
-}
-
-.contactSection {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
 
 .asideContact {
@@ -1770,6 +1749,138 @@ header {
   }
 }
 
+.modalOverlay {
+  background: rgba(0, 0, 0, 0.65);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.modalContainer {
+  background: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90vw;
+  height: 45vh;
+  position: relative;
+}
+
+.closeModelBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px 40px;
+  font-size: 1.6rem;
+  background-color: transparent;
+}
+
+.closeModelBtn:hover,
+.closeModelBtn:focus {
+  color: #f38d8d;
+}
+
+.modalVisible {
+  visibility: visible;
+  z-index: 5;
+  -webkit-animation: showModalAnimation 0.5s;
+          animation: showModalAnimation 0.5s;
+}
+
+.modalImage {
+  width: 35%;
+}
+
+.modalImage img {
+  -webkit-box-shadow: 10px 10px #227284;
+          box-shadow: 10px 10px #227284;
+}
+
+.modalText {
+  width: 65%;
+}
+
+.modalText h3 {
+  display: inline-block;
+  font-family: "Oswald", sans-serif;
+  font-size: 2.1rem;
+  color: #171717;
+  text-transform: uppercase;
+  line-height: 150%;
+  letter-spacing: 1px;
+  padding-bottom: 20px;
+}
+
+.modalText p {
+  font-family: "Cabin", sans-serif;
+  font-size: 1rem;
+  color: #171717;
+  letter-spacing: 0px;
+  line-height: 32px;
+  padding-bottom: 20px;
+}
+
+.modalImageContainer {
+  margin-right: 60px;
+}
+
+@-webkit-keyframes showModalAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showModalAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 960px) {
+  .modalImage {
+    display: none;
+  }
+  .modalText {
+    width: 100%;
+  }
+  .modalContainer {
+    height: 60vh;
+  }
+}
+
 .wrapper {
   max-width: 1220px;
   margin: 0 auto;
@@ -1790,6 +1901,22 @@ header {
   background-color: #ffffff;
 }
 
+.displayFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 section {
   margin: 0;
   padding: 0;
@@ -1805,6 +1932,10 @@ button {
   padding: 20px 50px;
   background-color: #f38d8d;
   border: transparent;
+}
+
+.btn {
+  width: 200px;
 }
 
 .btn a,
@@ -1823,6 +1954,38 @@ button:focus,
 a:hover,
 a:focus {
   color: #ffffff;
+}
+
+.blogHeaderImage,
+.contactHeaderImage {
+  width: 100%;
+  background-color: #b9dde7;
+  position: relative;
+}
+
+.blogHeaderImage img,
+.contactHeaderImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.blogSection,
+.contactSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 @media (max-width: 660px) {

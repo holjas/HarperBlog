@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HOME -HollyJasiuraProjectOne</title>
+    <link rel="shortcut icon" href="#" />
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="./styles/style.css" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -24,13 +26,18 @@
       <div class="wrapperSides">
         <!-- Top Navigation Start -->
         <nav class="navBar">
+          <li class="navToggle"><i class="fas fa-bars"></i></li>
+
           <ul class="navSelection">
-            <li><i class="fas fa-bars"></i></li>
-            <li><a href="#home" class="active">home</a></li>
-            <li><a href="#aboutHarper">about</a></li>
+            <li class="navSelectionItem">
+              <a href="#home" class="active">home</a>
+            </li>
+            <li class="navSelectionItem"><a href="#aboutHarper">about</a></li>
             <li class="navLogo">harper</li>
-            <li><a href="./blog.html">blog</a></li>
-            <li><a href="./contact.html">contact</a></li>
+            <li class="navSelectionItem"><a href="./blog.html">blog</a></li>
+            <li class="navSelectionItem">
+              <a href="./contact.html">contact</a>
+            </li>
           </ul>
         </nav>
         <!-- Top Navigation End -->
@@ -54,6 +61,55 @@
     </header>
 
     <main>
+      <!-- modalSection Start -->
+      <div class="modalOverlay">
+        <div class="wrapper modalContainer">
+          <button class="closeModelBtn"><i class="fas fa-times"></i></button>
+          <div class="modalImage">
+            <div class="modalImageContainer">
+              <img src="./assets/home-image-5.jpg" alt="" />
+            </div>
+          </div>
+          <div class="modalText">
+            <h3>let's connect!</h3>
+            <p>
+              Sweet roll bonbon bonbon cake cotton candy pudding dragée pastry.
+              Bonbon apple pie dragée marshmallow sesame snaps chocolate.
+              Jujubes toffee candy canes soufflé oat cake chocolate bar cake.
+            </p>
+            <div class="formShared">
+              <form
+                action=""
+                method="POST"
+                class="blogCommentForm"
+                name="blogCommentForm"
+              >
+                <legend>leave you comment</legend>
+                <label for="userName">your name</label>
+                <input
+                  type="text"
+                  id="userName"
+                  name="userName"
+                  placeholder="Name"
+                  class="formItem"
+                />
+                <label for="userEmail">your email</label>
+                <input
+                  type="email"
+                  id="userEmail"
+                  name="userEmail"
+                  placeholder="Email address"
+                  class="formItem"
+                />
+
+                <button type="submit" class="btnLarge">subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modalSection end -->
+
       <!-- aboutSection  start -->
       <section class="wrapperSectionPrimary" id="aboutHarper">
         <div class="wrapper aboutSection">
@@ -64,8 +120,13 @@
               normcore photo booth, hammock godard microdosing schlitz
               vaporware. Vegan skateboard schlitz chambray.
             </p>
+<<<<<<< HEAD
             <div>
               <a href="./blog.html" class="btn">find out more</a>
+=======
+            <div class="btn">
+              <a href="./blog.html">find out more</a>
+>>>>>>> AssignmentTwoFeature
             </div>
           </div>
         </div>
@@ -87,8 +148,9 @@
         <div class="wrapper smallContactSection">
           <div class="smallContact">
             <a href="#imageGallery">
+              <span class="sr-only">go to image gallery</span>
               <div class="smallCircle">
-                <i class="fas fa-image"></i>
+                <i class="fas fa-image" aria-hidden="true"></i>
               </div>
             </a>
             <a href="#imageGallery">
@@ -102,6 +164,7 @@
           </div>
           <div class="smallContact">
             <a href="./blog.html">
+              <span class="sr-only">go to blog section</span>
               <div class="smallCircle">
                 <i class="fas fa-user"></i>
               </div>
@@ -117,12 +180,13 @@
             </p>
           </div>
           <div class="smallContact">
-            <a href="./blog.html">
+            <a href=""
+              ><span class="sr-only">go to about section</span>
               <div class="smallCircle">
                 <i class="fas fa-tv"></i>
               </div>
             </a>
-            <a href="./blog.html">
+            <a href="">
               <h3>blog</h3>
             </a>
             <p>
@@ -133,7 +197,8 @@
           </div>
 
           <div class="smallContact">
-            <a href="./contact.html">
+            <a href="./contact.html"
+              ><span class="sr-only">go to contact me section</span>
               <div class="smallCircle">
                 <i class="fas fa-phone"></i>
               </div>
@@ -171,9 +236,9 @@
               normcore photo booth, hammock godard microdosing schlitz
               vaporware. Vegan skateboard schlitz chambray.
             </p>
-            <button class="btn">
+            <div class="btn">
               <a href="./blog.html">read more</a>
-            </button>
+            </div>
           </div>
         </div>
 
@@ -194,9 +259,9 @@
               normcore photo booth, hammock godard microdosing schlitz
               vaporware. Vegan skateboard schlitz chambray.
             </p>
-            <button class="btn">
+            <div class="btn">
               <a href="./blog.html">read more</a>
-            </button>
+            </div>
           </div>
         </div>
       </section>
@@ -207,7 +272,7 @@
         <div class="wrapper harperJourneySection">
           <div class="smallJourneyImage">
             <div class="journeyImageContainer">
-              <img src="./assets/home-image-5.jpg" alt="" />
+              <img src="./assets/home-image-5.jpg" alt="headshot of harper" />
             </div>
           </div>
           <div class="smallJourneyText">
@@ -220,9 +285,9 @@
               Pickled paleo literally hot chicken, taxidermy chillwave copper
               mug coloring book quinoa gluten-free sartorial.
             </p>
-            <button class="btn">
+            <div class="btn">
               <a href="./blog.html">find out more</a>
-            </button>
+            </div>
           </div>
         </div>
       </section>
@@ -230,15 +295,26 @@
 
       <!-- imageGallery start  -->
       <section class="wrapperSectionWhite" id="imageGallery">
-        <div class="wrapper imageGallery">
-          <div class="imageGalleryItem">
-            <img src="./assets/home-image-6.jpg" alt="" />
-          </div>
-          <div class="imageGalleryItem">
-            <img src="./assets/home-image-7.jpg" alt="" />
-          </div>
-          <div class="imageGalleryItem">
-            <img src="./assets/home-image-8.jpg" alt="" />
+        <div class="wrapper imageGallerySection">
+          <div class="displayFlex">
+            <div class="imageGalleryItem">
+              <img
+                src="./assets/home-image-6.jpg"
+                alt="pink building exterior"
+              />
+            </div>
+            <div class="imageGalleryItem item2">
+              <img
+                src="./assets/home-image-7.jpg"
+                alt="airplane flying at sunset"
+              />
+            </div>
+            <div class="imageGalleryItem item3">
+              <img
+                src="./assets/home-image-8.jpg"
+                alt="marble slab with pink and blue hue"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -249,4 +325,5 @@
       <p>Copyright &copy 2018 HackerYou</p>
     </footer>
   </body>
+  <script src="scripts.js"></script>
 </html>

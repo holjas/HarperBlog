@@ -1,0 +1,85 @@
+.modalOverlay {
+  background: rgba(0, 0, 0, 0.65);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  z-index: -1;
+}
+.modalContainer {
+  background: $primary4;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  height: 45vh;
+  position: relative;
+}
+.closeModelBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px 40px;
+  font-size: $headingFontSize3;
+  background-color: transparent;
+}
+.closeModelBtn:hover,
+.closeModelBtn:focus {
+  color: $accent;
+}
+.modalVisible {
+  visibility: visible;
+  z-index: 5;
+  animation: showModalAnimation 0.5s;
+}
+.modalImage {
+  width: 35%;
+}
+.modalImage img {
+  box-shadow: 10px 10px $primary1;
+}
+.modalText {
+  width: 65%;
+}
+.modalText h3 {
+  display: inline-block;
+  @include fontStyleHeader($headingFontSize2);
+  padding-bottom: $padding;
+}
+.modalText p {
+  @include fontStyleMain(32px, 0px);
+  padding-bottom: $padding;
+}
+.modalImageContainer {
+  margin-right: 60px;
+}
+@keyframes showModalAnimation {
+  0% {
+    opacity: 0;
+  }
+  // 50% {
+  //   opacity: 0.5;
+  // }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 960px) {
+  .modalImage {
+    display: none;
+  }
+  .modalText {
+    width: 100%;
+  }
+  .modalContainer {
+    height: 60vh;
+  }
+}

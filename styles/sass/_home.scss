@@ -64,6 +64,7 @@ header {
   @include fontStyleMain(32px, 0px);
   padding-bottom: $padding;
 }
+
 ///////////////////////////////////////////////////
 // fancyImageDivider Section
 .fancyImage {
@@ -154,7 +155,7 @@ header {
 }
 .photoBlogFlexItem h3,
 .photoBlogFlexItem p,
-.photoBlogFlexItem button {
+.photoBlogFlexItem .btn {
   margin-left: 60px;
 }
 .photoBlogFlexItem2 {
@@ -164,7 +165,7 @@ header {
 }
 .photoBlogFlexItem2 h3,
 .photoBlogFlexItem2 p,
-.photoBlogFlexItem2 button {
+.photoBlogFlexItem2 .btn {
   margin-right: 60px;
 }
 .photoBlogimageContainer1 {
@@ -225,6 +226,7 @@ header {
 }
 .imageGalleryItem {
   width: calc(100% / 3 - 40px);
+  padding: 20px;
 }
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
@@ -401,7 +403,8 @@ header {
     text-align: center;
   }
   .aboutSection p {
-    padding-bottom: $paddingLarge;
+    margin-bottom: $paddingLarge;
+    color: red;
   }
   //smallContact Section
   .smallContact {
