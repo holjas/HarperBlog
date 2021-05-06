@@ -76,15 +76,24 @@ a:focus {
   height: 100%;
   object-fit: contain;
 }
-.blogSection,
-.contactSection {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-}
+// .blogSection,
+// .contactSection {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   align-items: flex-start;
+// }
 ///////////////////////////////////////
 //mediaQueries
+@media (max-width: 1140) {
+  .blogSection,
+  .contactSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
 @media (max-width: 660px) {
   .wrapper {
     padding: 100px 20px;

@@ -3,6 +3,12 @@
 //commentBlog
 // ! see style.scss for shared stylings!
 
+.contactSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
 //contactHeader
 .contactHeaderImage:after {
   content: "contact me";
