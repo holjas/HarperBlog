@@ -1088,9 +1088,9 @@ header {
   .homeImageContainer {
     display: none;
   }
-  .photoBlogFlexItem.btn {
+  .photoBlogFlexItem .btn,
+  .photoBlogFlexItem2 .btn {
     margin: 0;
-    background-color: red;
   }
   .smallContactSection {
     -webkit-box-orient: vertical;

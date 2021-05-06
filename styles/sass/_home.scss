@@ -329,9 +329,9 @@ header {
     display: none;
   }
   //photoblog
-  .photoBlogFlexItem.btn {
+  .photoBlogFlexItem .btn,
+  .photoBlogFlexItem2 .btn {
     margin: 0;
-    background-color: red;
   }
   //smallContact Section
   .smallContactSection {
